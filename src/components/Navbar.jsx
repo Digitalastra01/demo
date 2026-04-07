@@ -70,7 +70,7 @@ const Navbar = () => {
               <Link to="/products/dental-instruments" className="nav-link">Dental Instruments <ChevronDown size={14} /></Link>
             </div>
             <div className="dropdown-container">
-              <a href="/#categories" className="nav-link">Surgical Instruments <ChevronDown size={14} /></a>
+              <Link to="/products/surgical-instruments" className="nav-link">Surgical Instruments <ChevronDown size={14} /></Link>
             </div>
             <a href="/#certificates" className="nav-link">Certificates</a>
             <a href="#contact" className="nav-link">Contact Us</a>
@@ -93,7 +93,7 @@ const Navbar = () => {
                <a href="/#about" onClick={() => setIsOpen(false)}>About Us</a>
                <a href="/#categories" onClick={() => setIsOpen(false)}>Beauty Instruments</a>
                <Link to="/products/dental-instruments" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
-               <a href="/#categories" onClick={() => setIsOpen(false)}>Surgical Instruments</a>
+               <Link to="/products/surgical-instruments" onClick={() => setIsOpen(false)}>Surgical Instruments</Link>
                <a href="/#certificates" onClick={() => setIsOpen(false)}>Certificates</a>
                <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
             </div>
