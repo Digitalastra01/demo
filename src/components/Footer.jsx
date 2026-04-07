@@ -24,7 +24,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-links">
-            <h4 className="footer-title text-gradient">Quick Links</h4>
+            <h4 className="footer-title">Quick Links</h4>
             <ul>
               <li><a href="#about">About Us</a></li>
               <li><a href="#categories">Instruments</a></li>
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-contact">
-            <h4 className="footer-title text-gradient">Contact Us</h4>
+            <h4 className="footer-title">Contact Us</h4>
             <ul>
               <li>
                 <MapPin size={18} className="contact-icon" />
@@ -55,7 +55,7 @@ const Footer = () => {
           </div>
           
           <div className="footer-newsletter">
-            <h4 className="footer-title text-gradient">Join Our Newsletter</h4>
+            <h4 className="footer-title">Join Our Newsletter</h4>
             <p className="newsletter-desc">Afzal Saeed, was founded with a vision. A vision to set international standards of quality and customer service.</p>
             <form className="newsletter-form" onSubmit={(e) => { e.preventDefault(); alert("Subscribed to the newsletter!"); }}>
               <div className="input-group">

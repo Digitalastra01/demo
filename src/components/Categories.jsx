@@ -9,7 +9,7 @@ const categories = [
     desc: 'Scalpels, Scissors, Forceps, Retractors, and specialized diagnostics sets crafted for life-saving precision.',
     icon: <Scissors size={36} />,
     image: '/surgical.png',
-    color: '#00F0FF',
+    color: '#0D9488', // Surgical Teal
     delay: 0.1
   },
   {
@@ -18,7 +18,7 @@ const categories = [
     desc: 'Extracting forceps, Elevators, Orthodontic pliers ensuring perfect grip and performance.',
     icon: <Stethoscope size={36} />,
     image: '/dental.png',
-    color: '#FF00E4',
+    color: '#0284C7', // Clinical Blue
     delay: 0.3
   },
   {
@@ -27,7 +27,7 @@ const categories = [
     desc: 'Professional hair cutting scissors, tweezers, and premium grooming kits for an elite finish.',
     icon: <Sparkles size={36} />,
     image: '/beauty.png',
-    color: '#7B2CBF',
+    color: '#0F766E', // Deep Teal
     delay: 0.5
   }
 ];
@@ -55,24 +55,22 @@ const Categories = () => {
               className="category-card glass"
               initial={{ opacity: 0, y: 50, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              whileHover={{ y: -15, scale: 1.03, boxShadow: `0 20px 40px ${cat.color}20`, borderColor: cat.color }}
+              whileHover={{ y: -10, scale: 1.02, boxShadow: '0 20px 40px rgba(15,23,42,0.08)' }}
               transition={{ 
-                duration: 0.6, 
-                delay: cat.delay,
-                type: 'spring',
-                stiffness: 100
+                duration: 0.5, 
+                delay: cat.delay
               }}
               viewport={{ once: true, margin: "-50px" }}
-              style={{ borderTop: `2px solid ${cat.color}` }}
+              style={{ borderTop: `4px solid ${cat.color}` }}
             >
               <div className="cat-img-wrapper">
                 <img src={cat.image} alt={cat.title} className="cat-img" />
-                <div className="cat-img-overlay" style={{ background: `linear-gradient(to top, var(--bg-card), transparent)` }}></div>
+                <div className="cat-img-overlay" style={{ background: `linear-gradient(to top, rgba(255,255,255,1), transparent)` }}></div>
               </div>
               <motion.div 
                 className="cat-icon"
                 whileHover={{ rotate: 10, scale: 1.1 }}
-                style={{ backgroundColor: `${cat.color}15`, color: cat.color, border: `1px solid ${cat.color}30` }}
+                style={{ backgroundColor: `${cat.color}15`, color: cat.color }}
               >
                 {cat.icon}
               </motion.div>
@@ -104,10 +102,10 @@ const Categories = () => {
             <motion.div 
               key={product}
               className="glass"
-              style={{ padding: '1rem 2rem', fontWeight: '600', borderRadius: '2rem', border: '1px solid var(--border-light)', cursor: 'pointer' }}
+              style={{ padding: '1rem 2rem', fontWeight: '600', borderRadius: '2rem', border: '1px solid var(--border-light)', cursor: 'pointer', background: '#fff' }}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05, borderColor: 'var(--primary)', boxShadow: '0 0 15px var(--primary-glow)' }}
+              whileHover={{ scale: 1.05, borderColor: 'var(--primary)', color: 'var(--primary)' }}
               transition={{ duration: 0.3, delay: i * 0.1 }}
               viewport={{ once: true }}
             >

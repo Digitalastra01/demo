@@ -15,7 +15,7 @@ const testimonials = [
     text: "The precision of their surgical instruments is unparalleled. We have reduced instrument fatigue during long procedures significantly thanks to their ergonomic designs.",
     author: "Dr. Sarah Jenkins",
     role: "⭐⭐⭐⭐⭐",
-    color: "var(--accent)"
+    color: "var(--secondary)"
   }
 ];
 
@@ -42,10 +42,10 @@ const Testimonials = () => {
               className="testimonial-card glass"
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
-              whileHover={{ y: -10, boxShadow: '0 15px 30px rgba(0,240,255,0.1)' }}
+              whileHover={{ y: -10, boxShadow: '0 15px 30px rgba(13,148,136,0.08)' }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
               viewport={{ once: true, margin: "-50px" }}
-              style={{ borderLeft: `3px solid ${test.color}` }}
+              style={{ borderLeft: `4px solid ${test.color}` }}
             >
               <Quote className="quote-icon" style={{ color: test.color }} size={40} />
               <p className="test-text">"{test.text}"</p>

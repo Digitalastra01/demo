@@ -1,7 +1,7 @@
 .events {
   position: relative;
   z-index: 1;
-  background-color: var(--bg-alt);
+  background-color: var(--bg-alt); /* pure white block */
 }
 
 .events-list {
@@ -14,12 +14,13 @@
 
 .event-card {
   display: flex;
-  background: var(--bg-card);
+  background: var(--bg-main); /* slightly off white */
   border: 1px solid var(--border-light);
   border-radius: 1.5rem;
   overflow: hidden;
   position: relative;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
 }
 
 .event-date {
@@ -28,13 +29,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.02);
+  background: #fff;
   min-width: 150px;
+  border-right: 1px solid var(--border-light);
 }
 
 .event-date span {
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   font-family: 'Outfit', sans-serif;
   line-height: 1;
 }
@@ -50,6 +52,7 @@
 .event-content {
   padding: 3rem 2.5rem;
   flex-grow: 1;
+  background: #fff;
 }
 
 .event-meta {
@@ -109,8 +112,8 @@
     flex-direction: column;
   }
   .event-date {
-    border-right: none !important;
-    border-bottom: 1px solid var(--border-light) !important;
+    border-right: none;
+    border-bottom: 1px solid var(--border-light);
     min-width: auto;
     padding: 1.5rem;
     flex-direction: row;

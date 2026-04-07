@@ -1,31 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Modern Dark Theme Palette */
-  --bg-main: #060913;      /* Deep Space Black */
-  --bg-alt: #0B1121;       /* Dark Navy Background */
-  --bg-card: rgba(18, 26, 47, 0.6); /* Translucent Card Background */
+  /* Pristine Clinical Light Theme Palette */
+  --bg-main: #FAFAFC;      /* Pearl White / Pristine background */
+  --bg-alt: #FFFFFF;       /* Pure White */
+  --bg-card: rgba(255, 255, 255, 0.85); /* Light translucent card */
   
-  --primary: #00F0FF;      /* Neon Cyan / High-Tech Blue */
-  --primary-light: #4EFAFF;
-  --primary-dark: #00B1C4;
-  --primary-glow: rgba(0, 240, 255, 0.3);
+  --primary: #0D9488;      /* Surgical Teal / Medical Green */
+  --primary-light: #14B8A6;
+  --primary-dark: #0F766E;
+  --primary-glow: rgba(13, 148, 136, 0.2);
 
-  --secondary: #8A2BE2;    /* Neon Purple */
-  --accent: #E81CFF;       /* Magenta */
+  --secondary: #0284C7;    /* Clinical Blue */
+  --accent: #E11D48;       /* subtle warning/emergency red for contrast if needed */
 
-  --text-main: #FFFFFF;    /* Pure White */
-  --text-muted: #8B9BB4;   /* Cool Gray */
+  --text-main: #0F172A;    /* Dark Slate for pristine text */
+  --text-muted: #64748B;   /* Professional Gray */
   
-  --glass-border: rgba(255, 255, 255, 0.08);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  --glass-bg: rgba(11, 17, 33, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05);
+  --glass-bg: rgba(255, 255, 255, 0.7);
 
-  --border-light: rgba(255, 255, 255, 0.1);
-  --border-glow: inset 0 0 0 1px rgba(0, 240, 255, 0.2);
+  --border-light: #E2E8F0;
+  --border-glow: inset 0 0 0 1px rgba(13, 148, 136, 0.2);
 
-  --gradient-text: linear-gradient(90deg, #00F0FF, #8A2BE2);
-  --gradient-bg: linear-gradient(135deg, #0B1121 0%, #060913 100%);
+  --gradient-text: linear-gradient(90deg, #0D9488, #0284C7);
+  --gradient-bg: linear-gradient(135deg, #FAFAFC 0%, #F1F5F9 100%);
 }
 
 * {
@@ -48,14 +48,14 @@ body {
   position: relative;
 }
 
-/* Dynamic animated grid background */
+/* Dynamic animated grid background (Light version) */
 body::before {
   content: '';
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background-image: 
-    linear-gradient(to right, rgba(0, 240, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(13, 148, 136, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 148, 136, 0.04) 1px, transparent 1px);
   background-size: 50px 50px;
   z-index: -1;
   mask-image: radial-gradient(ellipse at center, black 0%, transparent 80%);
@@ -108,7 +108,7 @@ a {
   background: var(--glass-bg);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-border);
+  border: 1px solid var(--border-light);
   box-shadow: var(--glass-shadow);
   border-radius: 1.5rem;
 }
@@ -119,7 +119,7 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--gradient-text);
+  background: var(--primary);
   color: #fff;
   padding: 0.85rem 2rem;
   border-radius: 2rem;
@@ -134,23 +134,10 @@ a {
   z-index: 1;
 }
 
-.btn-primary::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: linear-gradient(90deg, var(--primary), var(--accent));
-  z-index: -1;
-  transition: opacity 0.3s ease;
-  opacity: 0;
-}
-
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px var(--primary-glow);
-}
-
-.btn-primary:hover::before {
-  opacity: 1;
+  box-shadow: 0 8px 25px rgba(13, 148, 136, 0.4);
+  background: var(--primary-dark);
 }
 
 .btn-outline {
@@ -158,8 +145,8 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: transparent;
-  color: var(--text-main);
+  background: #fff;
+  color: var(--primary);
   padding: 0.85rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
@@ -170,9 +157,9 @@ a {
 }
 
 .btn-outline:hover {
-  background: rgba(0, 240, 255, 0.1);
+  background: rgba(13, 148, 136, 0.05);
   transform: translateY(-2px);
-  box-shadow: inset 0 0 10px rgba(0, 240, 255, 0.3), 0 4px 14px 0 var(--primary-glow);
+  box-shadow: var(--glass-shadow);
 }
 
 .section {
@@ -180,12 +167,12 @@ a {
   position: relative;
 }
 
-/* Reusable glow effect */
+/* Soft Glow for light theme */
 .glow-effect {
   position: absolute;
   width: 300px;
   height: 300px;
-  background: var(--primary);
+  background: var(--primary-light);
   filter: blur(150px);
   opacity: 0.15;
   border-radius: 50%;

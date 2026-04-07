@@ -10,7 +10,7 @@ const events = [
     location: "Düsseldorf, Germany",
     desc: "Leading International Trade Fair. Meet us at Dusseldorf, Germany to explore our premium instruments.",
     status: "Upcoming",
-    color: "#00F0FF"
+    color: "#0D9488"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const events = [
     location: "Miami Beach, FL",
     desc: "Miami Beach Convention Center. Showcasing our premium range of precision instruments in the United States.",
     status: "Upcoming",
-    color: "#FF00E4"
+    color: "#0284C7"
   }
 ];
 
@@ -46,19 +46,19 @@ const Events = () => {
               className="event-card glass"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
-              whileHover={{ scale: 1.02, x: 10, borderColor: evt.color, boxShadow: `0 10px 30px ${evt.color}20` }}
+              whileHover={{ scale: 1.02, x: 10, borderColor: evt.color, boxShadow: `0 10px 30px ${evt.color}15` }}
               transition={{ duration: 0.4, delay: i * 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
             >
-              <div className="event-date" style={{ borderRight: `1px solid var(--border-light)` }}>
-                <Calendar size={28} style={{ color: evt.color, marginBottom: '1rem', filter: `drop-shadow(0 0 5px ${evt.color}50)` }} />
-                <span style={{ color: '#fff' }}>{evt.date.split(' ')[0]}</span>
+              <div className="event-date">
+                <Calendar size={28} style={{ color: evt.color, marginBottom: '1rem' }} />
+                <span style={{ color: 'var(--text-main)' }}>{evt.date.split(' ')[0]}</span>
                 <span className="month">{evt.date.split(' ')[1]} {evt.date.split(' ')[2]}</span>
               </div>
               
               <div className="event-content">
                 <div className="event-meta">
-                  <span className={`status badge-${evt.status.toLowerCase()}`} style={{ border: `1px solid ${evt.color}50`, color: evt.color, background: `${evt.color}15` }}>{evt.status}</span>
+                  <span className={`status badge-${evt.status.toLowerCase()}`} style={{ border: `1px solid ${evt.color}50`, color: evt.color, background: `${evt.color}10` }}>{evt.status}</span>
                   <div className="location">
                     <MapPin size={16} style={{ color: evt.color }} /> {evt.location}
                   </div>

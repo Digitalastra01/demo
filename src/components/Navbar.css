@@ -11,11 +11,11 @@
 
 .navbar.glass-nav {
   padding: 1rem 0;
-  background: rgba(6, 9, 19, 0.85); /* Deep Space Black translucent */
+  background: rgba(255, 255, 255, 0.85); /* Pristine light glass */
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-border);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05); /* very soft shadow */
 }
 
 .nav-content {
@@ -38,7 +38,6 @@
   color: var(--primary);
   font-size: 2rem;
   line-height: 0;
-  text-shadow: 0 0 10px var(--primary-glow);
 }
 
 .desktop-menu {
@@ -62,7 +61,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--gradient-text);
+  background: var(--primary);
   transition: width 0.3s ease;
   border-radius: 2px;
 }
@@ -85,7 +84,7 @@
   left: 0;
   width: 100%;
   overflow: hidden;
-  background: rgba(11, 17, 33, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border-light);
 }

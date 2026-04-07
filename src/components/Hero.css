@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: brightness(0.8) contrast(1.1);
+  /* subtle brightness tweak for light theme to ensure text readable */
 }
 
 .slide-overlay {
@@ -37,7 +37,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(100deg, rgba(6, 9, 19, 0.95) 0%, rgba(11, 17, 33, 0.8) 45%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(100deg, rgba(250, 250, 252, 0.95) 0%, rgba(255, 255, 255, 0.8) 45%, rgba(255, 255, 255, 0.1) 100%);
 }
 
 .slide-content {
@@ -58,16 +58,16 @@
   margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 4px;
+  color: var(--primary);
 }
 
 .slide-title {
   font-size: clamp(3rem, 7vw, 6rem);
   font-weight: 800;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 1.5rem;
   line-height: 1.05;
   letter-spacing: -2px;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .slide-subtitle {
@@ -93,9 +93,9 @@
 }
 
 .slider-btn {
-  background: var(--glass-bg);
+  background: #fff;
   border: 1px solid var(--border-light);
-  color: #fff;
+  color: var(--text-main);
   width: 55px;
   height: 55px;
   border-radius: 50%;
@@ -104,6 +104,7 @@
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
 .slider-dots {
@@ -122,11 +123,12 @@
   border-radius: 20px;
   border: none;
   cursor: pointer;
+  background: rgba(13, 148, 136, 0.3); /* muted green */
 }
 
 @media (max-width: 768px) {
   .slide-overlay {
-    background: linear-gradient(to bottom, rgba(6, 9, 19, 0.7) 0%, rgba(6, 9, 19, 0.95) 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(250, 250, 252, 0.95) 100%);
   }
   .slide-text {
     text-align: center;

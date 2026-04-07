@@ -1,7 +1,6 @@
 .footer {
-  background-color: var(--bg-alt);
+  background-color: #0F172A; /* Deep slate / medical corporate dark */
   padding: 8rem 0 2rem;
-  border-top: 1px solid var(--border-light);
   position: relative;
   overflow: hidden;
 }
@@ -28,11 +27,10 @@
   color: var(--primary);
   font-size: 2rem;
   line-height: 0;
-  text-shadow: 0 0 10px var(--primary-glow);
 }
 
 .footer-desc {
-  color: var(--text-muted);
+  color: #94A3B8;
   max-width: 400px;
   margin-bottom: 2rem;
   line-height: 1.7;
@@ -48,7 +46,7 @@
   height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(255,255,255,0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,7 +56,7 @@
 
 .social-icon:hover {
   background: var(--primary);
-  color: #000;
+  color: #fff;
   border-color: var(--primary);
   transform: translateY(-5px);
   box-shadow: 0 5px 15px var(--primary-glow);
@@ -70,6 +68,7 @@
   font-family: 'Outfit', sans-serif;
   font-weight: 700;
   letter-spacing: 0px;
+  color: #fff;
 }
 
 .footer-links ul, .footer-contact ul {
@@ -80,19 +79,19 @@
 }
 
 .footer-links a, .footer-contact a {
-  color: var(--text-muted);
+  color: #94A3B8;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover, .footer-contact a:hover {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 
 .footer-contact li {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  color: var(--text-muted);
+  color: #94A3B8;
 }
 
 .contact-icon {
@@ -107,7 +106,7 @@
 }
 
 .newsletter-desc {
-  color: var(--text-muted);
+  color: #94A3B8;
   font-size: 0.95rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
@@ -115,16 +114,16 @@
 
 .newsletter-form .input-group {
   display: flex;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 3rem;
   padding: 0.3rem;
-  border: 1px solid var(--border-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .newsletter-form .input-group:focus-within {
   border-color: var(--primary);
-  box-shadow: 0 0 15px rgba(0, 240, 255, 0.2);
+  box-shadow: 0 0 15px rgba(13, 148, 136, 0.2);
 }
 
 .newsletter-form input {
@@ -139,13 +138,13 @@
 }
 
 .newsletter-form input::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .newsletter-form .submit-btn {
   background: var(--primary);
   border: none;
-  color: #000;
+  color: #fff;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -158,15 +157,15 @@
 
 .newsletter-form .submit-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 15px var(--primary-glow);
-  background: #fff;
+  box-shadow: 0 5px 15px rgba(13, 148, 136, 0.4);
+  background: var(--primary-dark);
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 2rem;
-  border-top: 1px solid var(--border-light);
-  color: var(--text-muted);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  color: #94A3B8;
   font-size: 0.9rem;
 }
 
