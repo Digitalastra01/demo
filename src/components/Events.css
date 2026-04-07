@@ -1,0 +1,119 @@
+.events {
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-alt);
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.event-card {
+  display: flex;
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.event-date {
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.02);
+  min-width: 150px;
+}
+
+.event-date span {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: 'Outfit', sans-serif;
+  line-height: 1;
+}
+
+.event-date span.month {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+.event-content {
+  padding: 3rem 2.5rem;
+  flex-grow: 1;
+}
+
+.event-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.status {
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.event-content h3 {
+  font-size: 1.8rem;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.event-content p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.event-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+  transition: gap 0.3s ease;
+}
+
+.event-link:hover {
+  gap: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+  }
+  .event-date {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    min-width: auto;
+    padding: 1.5rem;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+}
