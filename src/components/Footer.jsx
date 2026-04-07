@@ -12,14 +12,14 @@ const Footer = () => {
         <div className="footer-grid">
           
           <div className="footer-brand">
-            <a href="#" className="footer-logo">Afzal Saeed<span className="accent-dot">.</span></a>
+            <a href="#" className="footer-logo">H & H Manufacturing<span className="accent-dot">.</span></a>
             <p className="footer-desc">
               Setting international standards in precision instruments for dental, surgical, and beauty industries since our inception.
             </p>
             <div className="social-links">
-              <a href="https://www.facebook.com/afzalsaeed.mfg" className="social-icon" target="_blank" rel="noreferrer"><FacebookIcon /></a>
-              <a href="https://www.instagram.com/afzalsaeed.mfg/" className="social-icon" target="_blank" rel="noreferrer"><InstagramIcon /></a>
-              <a href="https://www.linkedin.com/company/afzalsaeed-mfg/" className="social-icon" target="_blank" rel="noreferrer"><LinkedinIcon /></a>
+              <a href="#" className="social-icon" target="_blank" rel="noreferrer"><FacebookIcon /></a>
+              <a href="#" className="social-icon" target="_blank" rel="noreferrer"><InstagramIcon /></a>
+              <a href="#" className="social-icon" target="_blank" rel="noreferrer"><LinkedinIcon /></a>
             </div>
           </div>
           
@@ -37,26 +37,26 @@ const Footer = () => {
             <ul>
               <li>
                 <MapPin size={18} className="contact-icon" />
-                <span>Noul Chowk, Wazirabad Road,<br />Sialkot, 51260, Pakistan.</span>
+                <span>[Temporary Address Line 1]<br />[Temporary Address Line 2]</span>
               </li>
               <li>
                 <Phone size={18} className="contact-icon" />
-                <span>+92 52 3574088 <br/> +92 52 3574237</span>
+                <span>[Temporary Phone Number]</span>
               </li>
               <li>
                 <Phone size={18} className="contact-icon" />
-                <span>WhatsApp: +923008611706</span>
+                <span>WhatsApp: [Temporary WhatsApp]</span>
               </li>
               <li>
                 <Mail size={18} className="contact-icon" />
-                <a href="mailto:info@afzalsaeed.com">info@afzalsaeed.com</a>
+                <a href="mailto:info@hhmanufacturing.com">info@hhmanufacturing.com</a>
               </li>
             </ul>
           </div>
           
           <div className="footer-newsletter">
             <h4 className="footer-title">Join Our Newsletter</h4>
-            <p className="newsletter-desc">Afzal Saeed, was founded with a vision. A vision to set international standards of quality and customer service.</p>
+            <p className="newsletter-desc">H & H Manufacturing was founded with a vision. A vision to set international standards of quality and customer service.</p>
             <form className="newsletter-form" onSubmit={(e) => { e.preventDefault(); alert("Subscribed to the newsletter!"); }}>
               <div className="input-group">
                 <input type="email" placeholder="Your email address" required />
@@ -71,7 +71,7 @@ const Footer = () => {
         </div>
         
         <div className="footer-bottom">
-          <p>Copyright @ 2026 Afzal Saeed Manufacturing Corp All Rights Reserved. Designed & Developed By: Xperts</p>
+          <p>Copyright @ 2026 H & H Manufacturing Corp All Rights Reserved. Designed & Developed By: Xperts</p>
         </div>
       </div>
     </footer>

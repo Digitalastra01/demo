@@ -5,7 +5,7 @@ import './Testimonials.css';
 const testimonials = [
   {
     id: 1,
-    text: "Great quality! I Highly Recommended Afzal Saeed Beauty Instruments. I Purchased Many Years Manicure Instruments These Kits Has Been Awesome.",
+    text: "Great quality! I Highly Recommended H & H Manufacturing Beauty Instruments. I Purchased Many Years Manicure Instruments These Kits Has Been Awesome.",
     author: "Nabeel Ahmed",
     role: "⭐⭐⭐⭐⭐",
     color: "var(--primary)"

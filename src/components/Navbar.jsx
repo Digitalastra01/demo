@@ -27,7 +27,7 @@ const Navbar = () => {
           className="logo"
           whileHover={{ scale: 1.05 }}
         >
-          <a href="#">Afzal Saeed<span className="accent-dot">.</span></a>
+          <a href="#">H & H Manufacturing<span className="accent-dot">.</span></a>
         </motion.div>
         
         <div className="desktop-menu">
@@ -39,7 +39,7 @@ const Navbar = () => {
 
         <div className="nav-actions desktop-menu">
           <motion.a 
-            href="https://wa.me/+923008611706" 
+            href="#contact" 
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -69,7 +69,7 @@ const Navbar = () => {
               <a href="#categories" onClick={() => setIsOpen(false)}>Instruments</a>
               <a href="#certificates" onClick={() => setIsOpen(false)}>Certificates</a>
               <a href="#contact" onClick={() => setIsOpen(false)}>Contact</a>
-              <a href="https://wa.me/+923008611706" className="btn-primary" style={{marginTop: '1rem', width: '100%', justifyContent: 'center'}}>
+              <a href="#contact" className="btn-primary" style={{marginTop: '1rem', width: '100%', justifyContent: 'center'}}>
                 <Phone size={18} /> Let's Talk
               </a>
             </div>
