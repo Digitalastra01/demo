@@ -53,26 +53,17 @@ const Navbar = () => {
             </div>
             <div className="info-item language-selector-wrapper">
               <select className="native-language-select">
-                <option>Select Language</option>
-                <option>Abkhaz</option>
-                <option>Acehnese</option>
-                <option>Acholi</option>
-                <option>Afar</option>
-                <option>Afrikaans</option>
-                <option>Albanian</option>
-                <option>Alur</option>
-                <option>Amharic</option>
-                <option>Arabic</option>
-                <option>Armenian</option>
-                <option>Assamese</option>
-                <option>Avar</option>
-                <option>Awadhi</option>
-                <option>Aymara</option>
-                <option>Azerbaijani</option>
-                <option>Balinese</option>
-                <option>Baluchi</option>
-                <option>Bambara</option>
-                <option>Baoulé</option>
+                <option value="">Select Language</option>
+                <option value="en">English</option>
+                <option value="es">Español (Spanish)</option>
+                <option value="fr">Français (French)</option>
+                <option value="de">Deutsch (German)</option>
+                <option value="ar">العربية (Arabic)</option>
+                <option value="zh">中文 (Chinese)</option>
+                <option value="ru">Русский (Russian)</option>
+                <option value="pt">Português (Portuguese)</option>
+                <option value="it">Italiano (Italian)</option>
+                <option value="ja">日本語 (Japanese)</option>
               </select>
             </div>
             <button className="search-btn-circle" aria-label="Search">
