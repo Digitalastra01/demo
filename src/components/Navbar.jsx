@@ -51,9 +51,29 @@ const Navbar = () => {
               <Phone size={16} />
               <span>[Temporary WhatsApp]</span>
             </div>
-            <div className="info-item dropdown-container language-selector">
-              <span>Select Language</span>
-              <ChevronDown size={14} />
+            <div className="info-item language-selector-wrapper">
+              <select className="native-language-select">
+                <option>Select Language</option>
+                <option>Abkhaz</option>
+                <option>Acehnese</option>
+                <option>Acholi</option>
+                <option>Afar</option>
+                <option>Afrikaans</option>
+                <option>Albanian</option>
+                <option>Alur</option>
+                <option>Amharic</option>
+                <option>Arabic</option>
+                <option>Armenian</option>
+                <option>Assamese</option>
+                <option>Avar</option>
+                <option>Awadhi</option>
+                <option>Aymara</option>
+                <option>Azerbaijani</option>
+                <option>Balinese</option>
+                <option>Baluchi</option>
+                <option>Bambara</option>
+                <option>Baoulé</option>
+              </select>
             </div>
             <button className="search-btn-circle" aria-label="Search">
               <Search size={16} color="var(--primary-dark)" />

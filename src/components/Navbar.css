@@ -109,10 +109,27 @@
   cursor: pointer;
 }
 
-.language-selector {
+.language-selector-wrapper {
   border-left: 1px solid rgba(255,255,255,0.2);
   padding-left: 1.5rem;
   margin-left: 0.5rem;
+}
+
+.native-language-select {
+  background: transparent;
+  color: #ffffff;
+  border: none;
+  font-family: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+  padding-right: 0.5rem;
+}
+
+.native-language-select option {
+  background: #ffffff;
+  color: #000000;
+  padding: 0.5rem;
 }
 
 .search-btn-circle {
@@ -206,6 +223,8 @@
   background: var(--primary-light);
   border-radius: 10px;
 }
+
+/* Modifiers for smaller dropdowns like language removed since we use native select */
 
 .dropdown-hover:hover .dropdown-menu {
   opacity: 1;
