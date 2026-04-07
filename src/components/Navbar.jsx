@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, Search, ChevronDown, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { dentalCategories, surgicalCategories } from '../data/categories';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -66,11 +67,21 @@ const Navbar = () => {
           <div className="bottom-nav-bar desktop-menu">
             <a href="/#about" className="nav-link">About Us</a>
             <a href="/#categories" className="nav-link">Beauty Instruments</a>
-            <div className="dropdown-container">
+            <div className="dropdown-container dropdown-hover">
               <Link to="/products/dental-instruments" className="nav-link">Dental Instruments <ChevronDown size={14} /></Link>
+              <div className="dropdown-menu">
+                {dentalCategories.map((cat, idx) => (
+                  <Link key={idx} to="/products/dental-instruments" className="dropdown-item">{cat}</Link>
+                ))}
+              </div>
             </div>
-            <div className="dropdown-container">
+            <div className="dropdown-container dropdown-hover">
               <Link to="/products/surgical-instruments" className="nav-link">Surgical Instruments <ChevronDown size={14} /></Link>
+              <div className="dropdown-menu">
+                {surgicalCategories.map((cat, idx) => (
+                  <Link key={idx} to="/products/surgical-instruments" className="dropdown-item">{cat}</Link>
+                ))}
+              </div>
             </div>
             <a href="/#certificates" className="nav-link">Certificates</a>
             <a href="#contact" className="nav-link">Contact Us</a>
