@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, Search, ChevronDown, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -26,7 +27,7 @@ const Navbar = () => {
         
         {/* Left Logo Area */}
         <div className="logo-area">
-          <a href="#">
+          <Link to="/">
             <div className="logo-icon-wrapper">
               <Activity size={32} color="var(--primary-dark)" />
             </div>
@@ -34,7 +35,7 @@ const Navbar = () => {
               <span className="logo-title text-gradient">H & H Manufacturing</span>
               <span className="logo-subtitle">Manufacturing Corp.</span>
             </div>
-          </a>
+          </Link>
         </div>
         
         {/* Right Nav Area */}
@@ -63,15 +64,15 @@ const Navbar = () => {
 
           {/* Bottom Nav Links */}
           <div className="bottom-nav-bar desktop-menu">
-            <a href="#about" className="nav-link">About Us</a>
-            <a href="#categories" className="nav-link">Beauty Instruments</a>
+            <a href="/#about" className="nav-link">About Us</a>
+            <a href="/#categories" className="nav-link">Beauty Instruments</a>
             <div className="dropdown-container">
-              <a href="#categories" className="nav-link">Dental Instruments <ChevronDown size={14} /></a>
+              <Link to="/products/dental-instruments" className="nav-link">Dental Instruments <ChevronDown size={14} /></Link>
             </div>
             <div className="dropdown-container">
-              <a href="#categories" className="nav-link">Surgical Instruments <ChevronDown size={14} /></a>
+              <a href="/#categories" className="nav-link">Surgical Instruments <ChevronDown size={14} /></a>
             </div>
-            <a href="#certificates" className="nav-link">Certificates</a>
+            <a href="/#certificates" className="nav-link">Certificates</a>
             <a href="#contact" className="nav-link">Contact Us</a>
           </div>
         </div>
@@ -89,11 +90,11 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             <div className="mobile-menu-inner">
-               <a href="#about" onClick={() => setIsOpen(false)}>About Us</a>
-               <a href="#categories" onClick={() => setIsOpen(false)}>Beauty Instruments</a>
-               <a href="#categories" onClick={() => setIsOpen(false)}>Dental Instruments</a>
-               <a href="#categories" onClick={() => setIsOpen(false)}>Surgical Instruments</a>
-               <a href="#certificates" onClick={() => setIsOpen(false)}>Certificates</a>
+               <a href="/#about" onClick={() => setIsOpen(false)}>About Us</a>
+               <a href="/#categories" onClick={() => setIsOpen(false)}>Beauty Instruments</a>
+               <Link to="/products/dental-instruments" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
+               <a href="/#categories" onClick={() => setIsOpen(false)}>Surgical Instruments</a>
+               <a href="/#certificates" onClick={() => setIsOpen(false)}>Certificates</a>
                <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
             </div>
           </motion.div>

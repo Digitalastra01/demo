@@ -1,22 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Categories from './components/Categories';
-import Testimonials from './components/Testimonials';
-import Events from './components/Events';
 import Footer from './components/Footer';
+import Home from './pages/Home';
+import DentalInstruments from './pages/DentalInstruments';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <About />
-      <Categories />
-      <Testimonials />
-      <Events />
-      <Footer />
-    </>
+    <Router>
+      <div style={{ paddingTop: '90px' }}> {/* Add padding to prevent navbar overlap */}
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products/dental-instruments" element={<DentalInstruments />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
