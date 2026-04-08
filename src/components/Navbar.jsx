@@ -66,12 +66,23 @@ const Navbar = () => {
                 <option value="ja">日本語 (Japanese)</option>
               </select>
             </div>
-            <button className="search-btn-circle" aria-label="Search">
+            <motion.button 
+              className="search-btn-circle" 
+              aria-label="Search"
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Search size={16} color="var(--primary-dark)" />
-            </button>
-            <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle Navigation">
+            </motion.button>
+            <motion.button 
+              className="mobile-toggle" 
+              onClick={() => setIsOpen(!isOpen)} 
+              aria-label="Toggle Navigation"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
               {isOpen ? <X size={24} color="#fff" /> : <Menu size={24} color="#fff" />}
-            </button>
+            </motion.button>
           </div>
 
           {/* Bottom Nav Links */}

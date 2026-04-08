@@ -96,12 +96,22 @@ const Hero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
               >
-                <a href="#categories" className="btn-primary">
+                <motion.a 
+                  href="#categories" 
+                  className="btn-primary"
+                  whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0, 169, 157, 0.4)' }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   Explore Catalog <ArrowRight size={18} />
-                </a>
-                <a href="#about" className="btn-outline">
+                </motion.a>
+                <motion.a 
+                  href="#about" 
+                  className="btn-outline"
+                  whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   Learn More
-                </a>
+                </motion.a>
               </motion.div>
             </motion.div>
           </div>

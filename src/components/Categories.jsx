@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Scissors, Stethoscope, Sparkles } from 'lucide-react';
 import './Categories.css';
 
@@ -77,9 +78,16 @@ const Categories = () => {
               <h3 className="cat-title">{cat.title}</h3>
               <p className="cat-desc">{cat.desc}</p>
               
-              <a href="#" className="cat-link" style={{ color: cat.color }}>
-                View Catalog <ArrowRight size={18} />
-              </a>
+              <Link to={`/products/${cat.id}-instruments`} style={{ textDecoration: 'none' }}>
+                <motion.div 
+                  className="cat-link" 
+                  style={{ color: cat.color }}
+                  whileHover={{ x: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  View Catalog <ArrowRight size={18} />
+                </motion.div>
+              </Link>
             </motion.div>
           ))}
         </div>
