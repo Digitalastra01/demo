@@ -8,6 +8,25 @@ import './Navbar.css';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
+
+  useEffect(() => {
+    if (searchQuery.trim().length > 0) {
+      const q = searchQuery.toLowerCase();
+      const results = [];
+      dentalCategories.forEach(c => {
+        if (c.toLowerCase().includes(q)) results.push({ name: c, type: 'dental' });
+      });
+      surgicalCategories.forEach(c => {
+        if (c.toLowerCase().includes(q)) results.push({ name: c, type: 'surgical' });
+      });
+      setSearchResults(results.slice(0, 8)); // Top 8 results
+    } else {
+      setSearchResults([]);
+    }
+  }, [searchQuery]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,14 +85,61 @@ const Navbar = () => {
                 <option value="ja">日本語 (Japanese)</option>
               </select>
             </div>
-            <motion.button 
-              className="search-btn-circle" 
-              aria-label="Search"
-              whileHover={{ scale: 1.15, rotate: 5 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              <Search size={16} color="var(--primary-dark)" />
-            </motion.button>
+            <div className="search-container" style={{ position: 'relative', display: 'flex', alignItems: 'center', marginLeft: '1rem' }}>
+              <AnimatePresence>
+                {isSearchOpen && (
+                  <motion.input
+                    initial={{ width: 0, opacity: 0 }}
+                    animate={{ width: 220, opacity: 1 }}
+                    exit={{ width: 0, opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                    type="text"
+                    placeholder="Search instruments..."
+                    className="search-input"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    autoFocus
+                  />
+                )}
+              </AnimatePresence>
+              <motion.button 
+                className="search-btn-circle" 
+                aria-label="Search"
+                whileHover={{ scale: 1.15, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={() => setIsSearchOpen(!isSearchOpen)}
+                style={{ marginLeft: isSearchOpen ? '0.5rem' : '0' }}
+              >
+                {isSearchOpen ? <X size={16} color="var(--primary-dark)" /> : <Search size={16} color="var(--primary-dark)" />}
+              </motion.button>
+              
+              <AnimatePresence>
+                {isSearchOpen && searchResults.length > 0 && (
+                  <motion.div 
+                    className="search-dropdown"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                  >
+                    {searchResults.map((res, i) => (
+                      <Link 
+                        key={i} 
+                        to={`/products/${res.type}-instruments`} 
+                        className="search-result-item"
+                        onClick={() => {
+                          setIsSearchOpen(false);
+                          setSearchQuery("");
+                        }}
+                      >
+                        <Search size={12} style={{ marginRight: '8px', opacity: 0.6 }} />
+                        <span className="search-result-text">{res.name}</span>
+                        <span className="search-result-type">{res.type}</span>
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <motion.button 
               className="mobile-toggle" 
               onClick={() => setIsOpen(!isOpen)} 
