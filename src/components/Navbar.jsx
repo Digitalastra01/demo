@@ -70,20 +70,8 @@ const Navbar = () => {
               <Phone size={16} />
               <span>[Temporary WhatsApp]</span>
             </div>
-            <div className="info-item language-selector-wrapper">
-              <select className="native-language-select">
-                <option value="">Select Language</option>
-                <option value="en">English</option>
-                <option value="es">Español (Spanish)</option>
-                <option value="fr">Français (French)</option>
-                <option value="de">Deutsch (German)</option>
-                <option value="ar">العربية (Arabic)</option>
-                <option value="zh">中文 (Chinese)</option>
-                <option value="ru">Русский (Russian)</option>
-                <option value="pt">Português (Portuguese)</option>
-                <option value="it">Italiano (Italian)</option>
-                <option value="ja">日本語 (Japanese)</option>
-              </select>
+            <div className="info-item language-selector-wrapper" style={{ overflow: 'hidden' }}>
+              <div id="google_translate_element"></div>
             </div>
             <div className="search-container" style={{ position: 'relative', display: 'flex', alignItems: 'center', marginLeft: '1rem' }}>
               <AnimatePresence>

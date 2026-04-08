@@ -115,7 +115,22 @@
   margin-left: 0.5rem;
 }
 
-.native-language-select {
+/* Global Google Translate Overrides */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+body {
+  top: 0px !important;
+}
+.goog-logo-link {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+  font-size: 0 !important;
+}
+
+#google_translate_element select {
   background: transparent;
   color: #ffffff;
   border: none;
@@ -126,7 +141,7 @@
   padding-right: 0.5rem;
 }
 
-.native-language-select option {
+#google_translate_element select option {
   background: #ffffff;
   color: #000000;
   padding: 0.5rem;
