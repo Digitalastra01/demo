@@ -28,8 +28,19 @@
   padding: 0 3rem 0 2rem;
   display: flex;
   align-items: center;
-  min-width: 380px;
-  clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
+  min-width: 250px;
+  clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+}
+
+.company-logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.company-logo-img:hover {
+  transform: scale(1.05);
 }
 
 .logo-area a {
@@ -39,32 +50,7 @@
   text-decoration: none;
 }
 
-.logo-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo-title {
-  font-family: 'Outfit', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--primary-dark);
-}
-
-.logo-subtitle {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #333;
-  font-weight: 700;
-}
+/* Removed old logo text styles as we use an image now */
 
 /* RIGHT NAV AREA - GREEN BG */
 .nav-area {

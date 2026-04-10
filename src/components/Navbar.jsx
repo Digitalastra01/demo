@@ -48,13 +48,7 @@ const Navbar = () => {
         {/* Left Logo Area */}
         <div className="logo-area">
           <Link to="/">
-            <div className="logo-icon-wrapper">
-              <Activity size={32} color="var(--primary-dark)" />
-            </div>
-            <div className="logo-text">
-              <span className="logo-title text-gradient">H & H Manufacturing</span>
-              <span className="logo-subtitle">Manufacturing Corp.</span>
-            </div>
+            <img src="/logo.png" alt="H & H Manufacturing" className="company-logo-img" />
           </Link>
         </div>
         

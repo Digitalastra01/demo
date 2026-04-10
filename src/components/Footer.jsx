@@ -13,7 +13,9 @@ const Footer = () => {
         <div className="footer-grid">
           
           <div className="footer-brand">
-            <a href="#" className="footer-logo">H & H Manufacturing<span className="accent-dot">.</span></a>
+            <a href="#" className="footer-logo">
+              <img src="/logo.png" alt="H & H Manufacturing" className="footer-logo-img" />
+            </a>
             <p className="footer-desc">
               Setting international standards in precision instruments for dental, surgical, and beauty industries since our inception.
             </p>
