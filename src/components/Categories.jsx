@@ -29,7 +29,8 @@ const categories = [
     icon: <Sparkles size={36} />,
     image: '/beauty.png',
     color: '#0F766E', // Deep Teal
-    delay: 0.5
+    delay: 0.5,
+    file: '/beauty-catalog.pdf'
   }
 ];
 
@@ -78,16 +79,29 @@ const Categories = () => {
               <h3 className="cat-title">{cat.title}</h3>
               <p className="cat-desc">{cat.desc}</p>
               
-              <Link to={`/products/${cat.id}-instruments`} style={{ textDecoration: 'none' }}>
-                <motion.div 
-                  className="cat-link" 
-                  style={{ color: cat.color }}
-                  whileHover={{ x: 5 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  View Catalog <ArrowRight size={18} />
-                </motion.div>
-              </Link>
+              {cat.file ? (
+                <a href={cat.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                  <motion.div 
+                    className="cat-link" 
+                    style={{ color: cat.color }}
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View Catalog <ArrowRight size={18} />
+                  </motion.div>
+                </a>
+              ) : (
+                <Link to={`/products/${cat.id}-instruments`} style={{ textDecoration: 'none' }}>
+                  <motion.div 
+                    className="cat-link" 
+                    style={{ color: cat.color }}
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View Catalog <ArrowRight size={18} />
+                  </motion.div>
+                </Link>
+              )}
             </motion.div>
           ))}
         </div>
