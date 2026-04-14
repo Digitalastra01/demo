@@ -48,7 +48,7 @@ const Navbar = () => {
         {/* Left Logo Area */}
         <div className="logo-area">
           <Link to="/">
-            <img src="/logo.png" alt="H & H Manufacturing" className="company-logo-img" />
+            <img src="/logo.png" alt="H&H Manufacturing LLC" className="company-logo-img" />
           </Link>
         </div>
         
@@ -58,11 +58,11 @@ const Navbar = () => {
           <div className="top-info-bar">
             <div className="info-item">
               <Mail size={16} />
-              <a href="mailto:info@hhmanufacturing.com">info@hhmanufacturing.com</a>
+              <a href="mailto:sales@manufacturing.com">sales@manufacturing.com</a>
             </div>
             <div className="info-item">
               <Phone size={16} />
-              <span>[Temporary WhatsApp]</span>
+              <span>718 964 8265</span>
             </div>
             <div className="info-item language-selector-wrapper" style={{ overflow: 'hidden' }}>
               <div id="google_translate_element"></div>
