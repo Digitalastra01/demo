@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './DentalInstruments.css';
 
 const column1 = [
@@ -40,8 +42,9 @@ const column3 = [
 
 const ProductCard = ({ name, idBase, idx }) => {
   const code = `S-${idBase}-${100 + idx}`;
+  const elementId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   return (
-    <div className="product-card">
+    <div id={elementId} className="product-card">
       <div className="image-container">
         <img src="/product_placeholder.png" alt={name} />
         <div className="action-buttons">
@@ -62,6 +65,18 @@ const ProductCard = ({ name, idBase, idx }) => {
 };
 
 const SurgicalInstruments = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => element.scrollIntoView({ behavior: 'smooth', block: 'center' }), 150);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="dental-page-container">
       {/* Breadcrumb Header */}

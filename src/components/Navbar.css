@@ -96,18 +96,23 @@
   cursor: pointer;
 }
 
-.language-selector-wrapper {
+.separator-left {
   border-left: 1px solid rgba(255,255,255,0.2);
   padding-left: 1.5rem;
   margin-left: 0.5rem;
+}
+
+.language-selector-wrapper {
   display: flex;
   align-items: center;
   height: 100%;
 }
 #google_translate_element {
   display: flex;
-  align-items: center;
-  margin-bottom: -4px; /* Google widget default shift adjustment */
+  align-items: flex-start;
+  height: 18px; /* Extremely tight crop to hide bottom overflow */
+  overflow: hidden; /* Completely hacks off the "Powered by Google" text that drops below */
+  margin-top: 2px;
 }
 
 /* Global Google Translate Overrides */
@@ -122,10 +127,13 @@ body {
 }
 .goog-te-gadget {
   color: transparent !important;
-  font-size: 0 !important;
-  display: flex !important;
-  align-items: center !important;
+  font-size: 0px !important;
   line-height: normal !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+.goog-te-gadget span {
+  display: none !important;
 }
 .goog-te-gadget-simple {
   display: flex !important;
@@ -136,22 +144,31 @@ body {
   box-sizing: border-box !important;
 }
 
-#google_translate_element select {
-  background: transparent;
-  color: #ffffff;
-  border: none;
-  font-family: inherit;
-  font-size: 0.85rem;
-  cursor: pointer;
-  outline: none;
-  padding-right: 0.5rem;
+.goog-te-combo {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  border: none !important;
+  font-family: inherit !important;
+  pointer-events: auto !important;
+  font-size: 0.85rem !important;
+  cursor: pointer !important;
+  outline: none !important;
+  margin: 0 !important;
+  padding: 0 1.2rem 0 0 !important;
+  appearance: none !important;
+  --webkit-appearance: none !important;
+  --moz-appearance: none !important;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0 center !important;
 }
 
-#google_translate_element select option {
+.goog-te-combo option {
   background: #ffffff;
   color: #000000;
   padding: 0.5rem;
 }
+
 
 .search-btn-circle {
   background: #ffffff;
@@ -278,6 +295,7 @@ body {
 .dropdown-hover {
   position: relative;
   padding-bottom: 0.5rem; /* Allow hovering down to the menu */
+  padding-top: 0.5rem; /* Symmetrical padding so align-items:center doesn't shift text up */
 }
 
 .dropdown-menu {
@@ -286,7 +304,7 @@ body {
   left: 0;
   background-color: var(--primary-dark);
   min-width: 300px;
-  max-width: 350px;
+  max-width: 400px;
   max-height: 70vh;
   overflow-y: auto;
   box-shadow: 0 15px 30px rgba(0,0,0,0.25);
@@ -328,9 +346,8 @@ body {
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.05);
   transition: all 0.2s ease;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  line-height: 1.4;
   text-transform: capitalize;
 }
 
@@ -346,7 +363,7 @@ body {
 
 /* MOBILE TOGGLE */
 .mobile-toggle {
-  display: none;
+  display: none !important;
   background: none;
   border: none;
   cursor: pointer;
@@ -404,7 +421,7 @@ body {
     display: none;
   }
   .mobile-toggle {
-    display: block;
+    display: block !important;
   }
   .top-info-bar {
     border-bottom: none;

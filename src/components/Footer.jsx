@@ -42,12 +42,16 @@ const Footer = () => {
                 <span>Waqas Bhutta<br />16632 16th Rd, Whitestone NY 11357</span>
               </li>
               <li>
-                <Phone size={18} className="contact-icon" />
-                <span>718 964 8265</span>
+                <a href="tel:+917189648265" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'inherit', textDecoration: 'none' }}>
+                  <Phone size={18} className="contact-icon" style={{ pointerEvents: 'none' }} />
+                  <span>+ 91 718 964 8265</span>
+                </a>
               </li>
               <li>
-                <Mail size={18} className="contact-icon" />
-                <a href="mailto:sales@manufacturing.com">sales@manufacturing.com</a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@hnhmanufacturing.com" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem', color: 'inherit', textDecoration: 'none' }}>
+                  <Mail size={18} className="contact-icon" style={{ pointerEvents: 'none' }} />
+                  <span>sales@hnhmanufacturing.com</span>
+                </a>
               </li>
             </ul>
           </div>
