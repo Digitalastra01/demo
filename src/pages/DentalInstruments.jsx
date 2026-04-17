@@ -34,6 +34,29 @@ const column2 = categories.slice(1, 2).concat(categories.slice(4, 5), categories
 
 const column3 = categories.slice(2, 3).concat(categories.slice(5, 6), categories.slice(8, 9), categories.slice(11, 12), categories.slice(14, 15), categories.slice(17, 18), categories.slice(20, 21), categories.slice(23, 24));
 
+const ProductCard = ({ name, idBase, idx }) => {
+  const code = `D-${idBase}-${100 + idx}`;
+  return (
+    <div className="product-card">
+      <div className="image-container">
+        <img src="/product_placeholder.png" alt={name} />
+        <div className="action-buttons">
+          <button className="icon-btn" aria-label="Add to cart" title="Add to Cart">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </button>
+          <button className="icon-btn" aria-label="Quick view" title="Quick View">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+        </div>
+      </div>
+      <div className="info-container">
+        <div className="product-name">{name}</div>
+        <div className="product-code">{code}</div>
+      </div>
+    </div>
+  );
+};
+
 const DentalInstruments = () => {
   return (
     <div className="dental-page-container">
@@ -50,25 +73,19 @@ const DentalInstruments = () => {
           
           <div className="instrument-column">
             {column1.map((item, idx) => (
-              <div key={`col1-${idx}`} className="instrument-card">
-                {item}
-              </div>
+              <ProductCard key={`col1-${idx}`} name={item} idBase="10" idx={idx} />
             ))}
           </div>
           
           <div className="instrument-column">
             {column2.map((item, idx) => (
-              <div key={`col2-${idx}`} className="instrument-card">
-                {item}
-              </div>
+              <ProductCard key={`col2-${idx}`} name={item} idBase="20" idx={idx} />
             ))}
           </div>
 
           <div className="instrument-column">
             {column3.map((item, idx) => (
-              <div key={`col3-${idx}`} className="instrument-card">
-                {item}
-              </div>
+              <ProductCard key={`col3-${idx}`} name={item} idBase="30" idx={idx} />
             ))}
           </div>
 

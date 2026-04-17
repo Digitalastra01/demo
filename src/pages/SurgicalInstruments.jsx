@@ -38,6 +38,29 @@ const column3 = [
   "Dissecting Forceps with Tungsten Carbide Inserts"
 ];
 
+const ProductCard = ({ name, idBase, idx }) => {
+  const code = `S-${idBase}-${100 + idx}`;
+  return (
+    <div className="product-card">
+      <div className="image-container">
+        <img src="/product_placeholder.png" alt={name} />
+        <div className="action-buttons">
+          <button className="icon-btn" aria-label="Add to cart" title="Add to Cart">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </button>
+          <button className="icon-btn" aria-label="Quick view" title="Quick View">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </button>
+        </div>
+      </div>
+      <div className="info-container">
+        <div className="product-name">{name}</div>
+        <div className="product-code">{code}</div>
+      </div>
+    </div>
+  );
+};
+
 const SurgicalInstruments = () => {
   return (
     <div className="dental-page-container">
@@ -54,25 +77,19 @@ const SurgicalInstruments = () => {
           
           <div className="instrument-column">
             {column1.map((item, idx) => (
-              <div key={`col1-${idx}`} className="instrument-card">
-                {item}
-              </div>
+              <ProductCard key={`col1-${idx}`} name={item} idBase="10" idx={idx} />
             ))}
           </div>
           
           <div className="instrument-column">
             {column2.map((item, idx) => (
-              <div key={`col2-${idx}`} className="instrument-card">
-                {item}
-              </div>
+              <ProductCard key={`col2-${idx}`} name={item} idBase="20" idx={idx} />
             ))}
           </div>
 
           <div className="instrument-column">
             {column3.map((item, idx) => (
-              <div key={`col3-${idx}`} className="instrument-card">
-                {item}
-              </div>
+              <ProductCard key={`col3-${idx}`} name={item} idBase="30" idx={idx} />
             ))}
           </div>
 
