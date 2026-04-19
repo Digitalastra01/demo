@@ -5,6 +5,13 @@ import './Hero.css';
 
 const slides = [
   {
+    id: 3,
+    title: "Beauty Instruments",
+    subtitle: "Flawless Execution",
+    desc: "Professional-grade beauty and grooming tools engineered with medical precision for unparalleled performance.",
+    image: "/beauty.png",
+  },
+  {
     id: 1,
     title: "Surgical Instruments",
     subtitle: "Precision Without Compromise",
@@ -17,13 +24,6 @@ const slides = [
     subtitle: "Crafted for Perfection",
     desc: "Advanced machining and hand-finishing ensure every dental tool meets the highest global standards for precision and durability.",
     image: "/dental.png",
-  },
-  {
-    id: 3,
-    title: "Beauty Instruments",
-    subtitle: "Flawless Execution",
-    desc: "Professional-grade beauty and grooming tools engineered with medical precision for unparalleled performance.",
-    image: "/beauty.png",
   }
 ];
 
@@ -96,22 +96,48 @@ const Hero = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, delay: 1.1 }}
               >
-                <motion.a 
-                  href="#categories" 
-                  className="btn-primary"
-                  whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0, 169, 157, 0.4)' }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Explore Catalog <ArrowRight size={18} />
-                </motion.a>
-                <motion.a 
-                  href="#about" 
-                  className="btn-outline"
-                  whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Learn More
-                </motion.a>
+                {slides[current].title === "Beauty Instruments" ? (
+                  <>
+                    <motion.a 
+                      href="/beauty-catalog.pdf" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-primary"
+                      whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0, 169, 157, 0.4)' }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Explore Catalog <ArrowRight size={18} />
+                    </motion.a>
+                    <motion.a 
+                      href="/beauty-catalog.pdf" 
+                      download
+                      className="btn-outline"
+                      whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Download PDF
+                    </motion.a>
+                  </>
+                ) : (
+                  <>
+                    <motion.a 
+                      href="#categories" 
+                      className="btn-primary"
+                      whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0, 169, 157, 0.4)' }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Explore Catalog <ArrowRight size={18} />
+                    </motion.a>
+                    <motion.a 
+                      href="#about" 
+                      className="btn-outline"
+                      whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Learn More
+                    </motion.a>
+                  </>
+                )}
               </motion.div>
             </motion.div>
           </div>

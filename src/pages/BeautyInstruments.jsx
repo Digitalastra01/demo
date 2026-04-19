@@ -1,40 +1,75 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import './DenseProductList.css';
+import './DenseProductList.css'; 
 
-const categories = [
-  "Diagnostics, Anaesthesia and other Instruments",
-  "Scalpels, Knives and Scalpel Handles",
-  "Scissors",
-  "Dissecting and Tissue Forceps",
-  "Sponge, Dressing and Tissue Grasping Forceps",
-  "Vessel Clips, Bulldog Clamps Haemostatic Forceps",
-  "Ligature, Hysterectomy and Compression Forceps Vaginal Clamps",
-  "Needle Holders, Suture Instruments",
-  "Probes, Pocket Instruments Sets",
-  "Wound Retractors",
-  "Self Retaining Retractors, Abdominal Retractors",
-  "Abdominal Surgery Intestinal and Rectal Instruments",
-  "Gall Bladder liver and Spleen Instruments",
-  "Genito Urinary Instruments and Trocars",
-  "Vaginal Specula and Uterine Dilators",
-  "Uterine Probes, Uterine Dressing, Polypus and Ovum Forceps",
-  "Biopsy Instruments and Curettes",
-  "Obstetrics and Tracheotomy",
-  "Cardiovascular and Thoracic Surgery",
-  "Bone Punches, Rongeurs",
-  "Elevators, Bone Levers, Raspatories, Bone Files, Bone Curettes",
-  "Mallets Chisels and Gouges",
-  "Bone Holding Forceps, Bone Rongeurs, Bone Cutting Forceps",
-  "Plaster Instruments",
-  "Suction Instruments",
-  "Scissors with Tungsten Carbide Inserts",
-  "Dissecting Forceps with Tungsten Carbide Inserts",
-  "Needle holders with Tungsten Carbide Inserts"
+const categoriesData = [
+  {
+    title: "Manicure",
+    id: "manicure",
+    items: [
+      "Nail Clippers (Straight / Curved)",
+      "Cuticle Nippers",
+      "Cuticle Pushers",
+      "Nail Scissors",
+      "Nail Files (Metal / Glass / Emery Board)",
+      "Nail Buffers",
+      "Nail Cleaners",
+      "Cuticle Knives",
+      "Nail Lifter / Ingrown Nail Tools"
+    ]
+  },
+  {
+    title: "Pedicure",
+    id: "pedicure",
+    items: [
+      "Heavy Duty Nail Clippers",
+      "Corn Cutters",
+      "Callus Removers",
+      "Foot Files / Rasps",
+      "Heel Scrapers",
+      "Ingrown Nail Tools",
+      "Pedicure Knives / Blades"
+    ]
+  },
+  {
+    title: "Eyelash & Eyebrow",
+    id: "eyelash-eyebrow",
+    items: [
+      "Eyebrow Tweezers (Slant / Pointed / Flat)",
+      "Eyelash Curlers",
+      "Eyebrow Scissors",
+      "Lash Applicators",
+      "Brow Razors",
+      "Eyebrow Trimmers"
+    ]
+  },
+  {
+    title: "Hair Removal",
+    id: "hair-removal",
+    items: [
+      "Facial Razors",
+      "Dermaplaning Tools",
+      "Waxing Spatulas (Metal)",
+      "Epilators (Manual tools)",
+      "Threading Tools (Spring type)"
+    ]
+  },
+  {
+    title: "Skin Care",
+    id: "skin-care",
+    items: [
+      "Blackhead Removers / Comedone Extractors",
+      "Acne Needles",
+      "Facial Rollers (Metal/Stone handle tools)",
+      "Skin Scrapers",
+      "Pimple Extractors",
+      "Derma Rollers"
+    ]
+  }
 ];
 
-const SurgicalListItem = ({ name, idBase, idx }) => {
-  const code = `S-${idBase}-${100 + idx}`;
+const BeautyListItem = ({ name, idBase, idx }) => {
+  const code = `B-${idBase}-${100 + idx}`;
   const elementId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   
   return (
@@ -55,7 +90,7 @@ const SurgicalListItem = ({ name, idBase, idx }) => {
   );
 };
 
-const SurgicalInstruments = () => {
+const BeautyInstruments = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -64,7 +99,7 @@ const SurgicalInstruments = () => {
       const element = document.getElementById(id);
       if (element) {
         setTimeout(() => {
-          const offset = 120; // sticky navbar offset
+          const offset = 120; // Accounting for sticky navbar
           const bodyRect = document.body.getBoundingClientRect().top;
           const elementRect = element.getBoundingClientRect().top;
           const elementPosition = elementRect - bodyRect;
@@ -84,14 +119,21 @@ const SurgicalInstruments = () => {
       {/* Breadcrumb Header */}
       <div className="breadcrumb-header">
         <div className="container">
-          <p>Home / Products / Surgical Instruments</p>
+          <p>Home / Products / Beauty Instruments</p>
         </div>
       </div>
 
       <div className="dense-container">
         <div className="dense-list-grid">
-          {categories.map((item, idx) => (
-            <SurgicalListItem key={idx} name={item} idBase="10" idx={idx} />
+          {categoriesData.map((cat, catIdx) => (
+            cat.items.map((item, idx) => (
+              <BeautyListItem 
+                key={`${catIdx}-${idx}`} 
+                name={item} 
+                idBase={`${catIdx + 1}0`} 
+                idx={idx} 
+              />
+            ))
           ))}
         </div>
       </div>
@@ -99,4 +141,4 @@ const SurgicalInstruments = () => {
   );
 };
 
-export default SurgicalInstruments;
+export default BeautyInstruments;

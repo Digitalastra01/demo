@@ -1,0 +1,94 @@
+/* DenseProductList.css */
+.page-container {
+  padding-top: 100px;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.dense-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 5rem;
+}
+
+.breadcrumb-header {
+  background: #1a1e24;
+  color: #fff;
+  padding: 1.5rem 0;
+  margin-bottom: 3rem;
+}
+
+.breadcrumb-header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.breadcrumb-header p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.dense-list-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.dense-list-item {
+  display: flex;
+  align-items: center;
+  background: #1a1e24;
+  padding: 1.5rem 2rem;
+  border-radius: 4px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  min-height: 80px;
+}
+
+.dense-list-item:hover {
+  background: #2a3038;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.item-main-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #ffffff;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.item-code {
+  display: none; /* Hidden to match screenshot navigation look */
+}
+
+.item-actions {
+  display: none; /* Hidden for the pure navigation grid look */
+}
+
+@media (max-width: 1024px) {
+  .dense-list-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dense-list-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .dense-list-item {
+    padding: 1.2rem 1.5rem;
+  }
+}

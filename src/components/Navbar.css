@@ -273,14 +273,30 @@ body {
   align-items: center;
   gap: 0.3rem;
   position: relative;
-  transition: opacity 0.3s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  padding: 0.6rem 1.25rem;
+  border-radius: 4px;
+}
+
+.active-nav-item .nav-link,
+.nav-link:hover,
+.dropdown-container:hover .nav-link {
+  background-color: #ffffff !important;
+  color: #005a50 !important; /* Specific teal color from screenshot */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.active-nav-item .nav-link::after,
+.nav-link:hover::after,
+.dropdown-container:hover .nav-link::after {
+  display: none; /* No underline for the block style */
 }
 
 .nav-link::after {
   content: '';
   position: absolute;
-  bottom: -4px;
-  left: 0;
+  bottom: 4px;
+  left: 1rem;
   width: 0;
   height: 2px;
   background: #ffffff;
@@ -288,14 +304,14 @@ body {
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  width: calc(100% - 2rem);
 }
 
 /* DROPDOWN MENU STYLES */
 .dropdown-hover {
   position: relative;
-  padding-bottom: 0.5rem; /* Allow hovering down to the menu */
-  padding-top: 0.5rem; /* Symmetrical padding so align-items:center doesn't shift text up */
+  display: flex;
+  align-items: center;
 }
 
 .dropdown-menu {
@@ -359,6 +375,67 @@ body {
   background-color: var(--primary);
   padding-left: 1.7rem;
   color: #f8fafc;
+}
+
+/* ACCORDION DROPDOWN STYLES */
+.accordion-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+.accordion-trigger {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  cursor: pointer;
+  padding: 0.85rem 1.25rem !important;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.accordion-trigger:hover, .accordion-trigger.active {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: var(--primary-light);
+}
+
+.accordion-trigger .lucide {
+  transition: transform 0.3s ease;
+}
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.accordion-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.submenu-item {
+  display: block;
+  padding: 0.65rem 1.5rem 0.65rem 2.5rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  transition: all 0.2s ease;
+  line-height: 1.4;
+}
+
+.submenu-item:hover {
+  background-color: var(--primary);
+  padding-left: 3rem;
+  color: #fff;
 }
 
 /* MOBILE TOGGLE */

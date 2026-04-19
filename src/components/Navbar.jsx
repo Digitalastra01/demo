@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, Search, ChevronDown, Activity } from 'lucide-react';
+import { Menu, X, Phone, Mail, Search, ChevronDown, ChevronRight, Activity } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
-import { dentalCategories, surgicalCategories } from '../data/categories';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { dentalCategories, surgicalCategories, beautyCategories } from '../data/categories';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -38,11 +38,23 @@ const Navbar = () => {
       surgicalCategories.forEach(c => {
         if (c.toLowerCase().includes(q)) results.push({ name: c, type: 'surgical' });
       });
+      beautyCategories.forEach(cat => {
+        if (cat.name.toLowerCase().includes(q)) results.push({ name: cat.name, type: 'beauty' });
+        cat.subItems.forEach(sub => {
+          if (sub.toLowerCase().includes(q)) results.push({ name: sub, type: 'beauty' });
+        });
+      });
       setSearchResults(results.slice(0, 8)); // Top 8 results
     } else {
       setSearchResults([]);
     }
   }, [searchQuery]);
+
+  const [expandedBeautyCategory, setExpandedBeautyCategory] = useState(null);
+
+  const toggleBeautyCategory = (categoryName) => {
+    setExpandedBeautyCategory(expandedBeautyCategory === categoryName ? null : categoryName);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -164,8 +176,50 @@ const Navbar = () => {
           {/* Bottom Nav Links */}
           <div className="bottom-nav-bar desktop-menu">
             <a href="/#about" className="nav-link">About Us</a>
-            <a href="/beauty-catalog.pdf" target="_blank" rel="noopener noreferrer" className="nav-link">Beauty Instruments</a>
-            <div className="dropdown-container dropdown-hover">
+            <div className={`dropdown-container dropdown-hover ${location.pathname.includes('/beauty-instruments') ? 'active-nav-item' : ''}`}>
+              <span className="nav-link">Beauty Instruments <ChevronDown size={14} /></span>
+              <div className="dropdown-menu">
+                {beautyCategories.map((cat, idx) => (
+                  <div key={idx} className="accordion-item">
+                    <button 
+                      className={`dropdown-item accordion-trigger ${expandedBeautyCategory === cat.name ? 'active' : ''}`}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        toggleBeautyCategory(cat.name);
+                      }}
+                    >
+                      {cat.name} <ChevronRight size={14} className={expandedBeautyCategory === cat.name ? 'rotate-90' : ''} />
+                    </button>
+                    <AnimatePresence>
+                      {expandedBeautyCategory === cat.name && (
+                        <motion.div 
+                          className="accordion-content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                        >
+                          {cat.subItems.map((sub, sIdx) => (
+                            <Link 
+                              key={sIdx} 
+                              to={`/products/beauty-instruments#${sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                              className="submenu-item"
+                              onClick={() => {
+                                setExpandedBeautyCategory(null);
+                                setIsOpen(false);
+                              }}
+                            >
+                              {sub}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className={`dropdown-container dropdown-hover ${location.pathname.includes('/dental-instruments') ? 'active-nav-item' : ''}`}>
               <Link to="/products/dental-instruments" className="nav-link">Dental Instruments <ChevronDown size={14} /></Link>
               <div className="dropdown-menu">
                 {dentalCategories.map((cat, idx) => (
@@ -173,7 +227,7 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-            <div className="dropdown-container dropdown-hover">
+            <div className={`dropdown-container dropdown-hover ${location.pathname.includes('/surgical-instruments') ? 'active-nav-item' : ''}`}>
               <Link to="/products/surgical-instruments" className="nav-link">Surgical Instruments <ChevronDown size={14} /></Link>
               <div className="dropdown-menu">
                 {surgicalCategories.map((cat, idx) => (
@@ -199,7 +253,7 @@ const Navbar = () => {
           >
             <div className="mobile-menu-inner">
                <a href="/#about" onClick={() => setIsOpen(false)}>About Us</a>
-               <a href="/beauty-catalog.pdf" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)}>Beauty Instruments</a>
+               <Link to="/products/beauty-instruments" onClick={() => setIsOpen(false)}>Beauty Instruments</Link>
                <Link to="/products/dental-instruments" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
                <Link to="/products/surgical-instruments" onClick={() => setIsOpen(false)}>Surgical Instruments</Link>
                <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>

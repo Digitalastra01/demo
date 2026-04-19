@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import DentalInstruments from './pages/DentalInstruments';
 import SurgicalInstruments from './pages/SurgicalInstruments';
 
+import BeautyInstruments from './pages/BeautyInstruments';
+
 function App() {
   return (
     <Router>
@@ -14,6 +16,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/products/dental-instruments" element={<DentalInstruments />} />
           <Route path="/products/surgical-instruments" element={<SurgicalInstruments />} />
+          <Route path="/products/beauty-instruments" element={<BeautyInstruments />} />
         </Routes>
         <Footer />
       </div>

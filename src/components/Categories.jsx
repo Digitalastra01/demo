@@ -5,13 +5,23 @@ import './Categories.css';
 
 const categories = [
   {
+    id: 'beauty',
+    title: 'Beauty Instruments',
+    desc: 'Professional hair cutting scissors, tweezers, and premium grooming kits for an elite finish.',
+    icon: <Sparkles size={36} />,
+    image: '/beauty.png',
+    color: '#0F766E', // Deep Teal
+    delay: 0.1,
+    file: '/beauty-catalog.pdf'
+  },
+  {
     id: 'surgical',
     title: 'Surgical Instruments',
     desc: 'Scalpels, Scissors, Forceps, Retractors, and specialized diagnostics sets crafted for life-saving precision.',
     icon: <Scissors size={36} />,
     image: '/surgical.png',
     color: '#0D9488', // Surgical Teal
-    delay: 0.1
+    delay: 0.3
   },
   {
     id: 'dental',
@@ -20,17 +30,7 @@ const categories = [
     icon: <Stethoscope size={36} />,
     image: '/dental.png',
     color: '#0284C7', // Clinical Blue
-    delay: 0.3
-  },
-  {
-    id: 'beauty',
-    title: 'Beauty Instruments',
-    desc: 'Professional hair cutting scissors, tweezers, and premium grooming kits for an elite finish.',
-    icon: <Sparkles size={36} />,
-    image: '/beauty.png',
-    color: '#0F766E', // Deep Teal
-    delay: 0.5,
-    file: '/beauty-catalog.pdf'
+    delay: 0.5
   }
 ];
 
@@ -79,7 +79,30 @@ const Categories = () => {
               <h3 className="cat-title">{cat.title}</h3>
               <p className="cat-desc">{cat.desc}</p>
               
-              {cat.file ? (
+              {cat.id === 'beauty' ? (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
+                  <a href={cat.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
+                    <motion.div 
+                      className="cat-link" 
+                      style={{ color: cat.color }}
+                      whileHover={{ x: 5 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Explore Catalogue <ArrowRight size={18} />
+                    </motion.div>
+                  </a>
+                  <a href={cat.file} download style={{ textDecoration: 'none' }}>
+                    <motion.div 
+                      className="cat-link" 
+                      style={{ color: cat.color }}
+                      whileHover={{ x: 5 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Download PDF <ArrowRight size={18} />
+                    </motion.div>
+                  </a>
+                </div>
+              ) : cat.file ? (
                 <a href={cat.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                   <motion.div 
                     className="cat-link" 
@@ -106,35 +129,6 @@ const Categories = () => {
           ))}
         </div>
         
-        <motion.div 
-          className="section-header"
-          style={{ marginTop: '8rem', marginBottom: '3rem' }}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true, margin: "-50px" }}
-        >
-          <h4 className="section-subtitle text-gradient">Premium Quality</h4>
-          <h2 className="heading-md">FEATURED PRODUCTS</h2>
-          <p className="section-desc">Made from the highest-grade German stainless steel.</p>
-        </motion.div>
-        
-        <div style={{ display: 'flex', justifyContent: 'center', gap: '1.2rem', flexWrap: 'wrap' }}>
-          {["Ziegler (AMI-01-116)", "Ziegler (AMI-01-118)", "Ayre (AMI-01-122)", "ENT Set (AMI-01-156)", "McIntosh (AMI-01-160)"].map((product, i) => (
-            <motion.div 
-              key={product}
-              className="glass"
-              style={{ padding: '1rem 2rem', fontWeight: '600', borderRadius: '2rem', border: '1px solid var(--border-light)', cursor: 'pointer', background: '#fff' }}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05, borderColor: 'var(--primary)', color: 'var(--primary)' }}
-              transition={{ duration: 0.3, delay: i * 0.1 }}
-              viewport={{ once: true }}
-            >
-              {product}
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
