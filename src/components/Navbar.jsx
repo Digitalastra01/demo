@@ -28,6 +28,12 @@ const Navbar = () => {
     }
   };
 
+  const handleEmailClick = (e) => {
+    if (!window.confirm("Do you want to open your email client to contact sales@hnhmanufacturing.com?")) {
+      e.preventDefault();
+    }
+  };
+
   useEffect(() => {
     if (searchQuery.trim().length > 0) {
       const q = searchQuery.toLowerCase();
@@ -85,7 +91,13 @@ const Navbar = () => {
           {/* Top Bar Info */}
           <div className="top-info-bar">
             <div className="info-item">
-              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@hnhmanufacturing.com" target="_blank" rel="noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'inherit', textDecoration: 'none' }}>
+              <a 
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=sales@hnhmanufacturing.com" 
+                target="_blank" 
+                rel="noreferrer" 
+                onClick={handleEmailClick}
+                style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'inherit', textDecoration: 'none' }}
+              >
                 <Mail size={16} style={{ pointerEvents: 'none' }} />
                 <span>sales@hnhmanufacturing.com</span>
               </a>
