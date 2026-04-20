@@ -80,74 +80,61 @@
 .product-image-container {
   position: relative;
   width: 100%;
-  height: 100%;
-  max-height: 500px;
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #ddd;
 }
 
 .product-main-image {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: zoom-in;
 }
 
 .product-main-image.zoomed {
-  transform: scale(2.5);
+  transform: scale(3) !important;
   cursor: zoom-out;
-}
-
-.product-image-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  max-height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden; /* Ensure zoom is contained */
 }
 
 .image-overlay-actions {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 15px;
+  right: 15px;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
-  z-index: 10;
+  gap: 15px;
+  z-index: 9999;
 }
 
 .img-action-btn {
-  background: #ffffff;
-  border: 1px solid #e2e8f0;
-  color: #1a1e24;
-  width: 48px;
-  height: 48px;
+  background: #0D9488 !important; /* Surgical Teal */
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
 }
 
 .img-action-btn:hover {
-  background: var(--primary-dark);
-  color: #ffffff;
-  border-color: var(--primary-dark);
   transform: scale(1.1);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background: #0F766E !important;
 }
 
-.img-action-btn.active {
-  background: var(--primary);
-  color: #ffffff;
-  border-color: var(--primary);
+.img-action-btn svg {
+  width: 24px;
+  height: 24px;
 }
 
 .product-modal-footer {
@@ -172,22 +159,24 @@
 }
 
 .btn-add-cart-modal {
-  background: var(--primary-light);
-  color: var(--primary-dark);
+  background: #0D9488 !important; /* Surgical Teal */
+  color: #fff !important;
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 2rem;
   border-radius: 6px;
   font-weight: 600;
+  font-size: 0.95rem !important;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.75rem;
   transition: all 0.2s;
 }
 
 .btn-add-cart-modal:hover {
-  background: #bc9c22;
+  background: #0F766E !important;
   transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(13, 148, 136, 0.3);
 }
 
 @media (max-width: 640px) {

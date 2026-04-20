@@ -64,9 +64,13 @@ const CartDrawer = () => {
                   {cartItems.map((item) => (
                     <div key={item.code} className="cart-item">
                       <div className="cart-item-img">
-                        <img src={`/images/instruments/beauty/${item.elementId}.png`} alt={item.name} onError={(e) => {
-                          e.target.src = 'https://via.placeholder.com/80/1a1e24/ffffff?text=IMG';
-                        }} />
+                        <img 
+                          src={`/images/instruments/${item.category || 'beauty'}/${item.elementId}.png`} 
+                          alt={item.name} 
+                          onError={(e) => {
+                            e.target.src = 'https://via.placeholder.com/80/1a1e24/ffffff?text=IMG';
+                          }} 
+                        />
                       </div>
                       <div className="cart-item-details">
                         <h4>{item.name}</h4>
@@ -94,9 +98,8 @@ const CartDrawer = () => {
                 </div>
                 <div className="cart-actions">
                   <button className="btn-clear" onClick={clearCart}>Clear All</button>
-                  <button className="btn-quote" onClick={handleRequestQuote}>
-                    <Send size={18} />
-                    Request Quote
+                  <button className="btn-checkout-placeholder" onClick={() => alert("Checkout system coming soon!")}>
+                    Checkout
                   </button>
                 </div>
               </div>

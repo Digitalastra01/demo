@@ -5,7 +5,7 @@ import { X, Download, ZoomIn, ShoppingCart } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import './ProductImageModal.css';
 
-const ProductImageModal = ({ isOpen, onClose, imagePath, productName, productCode, elementId }) => {
+const ProductImageModal = ({ isOpen, onClose, imagePath, productName, productCode, elementId, category }) => {
   const { addToCart } = useCart();
   const [isZoomed, setIsZoomed] = React.useState(false);
 
@@ -79,7 +79,7 @@ const ProductImageModal = ({ isOpen, onClose, imagePath, productName, productCod
               <button 
                 className="btn-add-cart-modal"
                 onClick={() => {
-                  addToCart({ name: productName, code: productCode, elementId });
+                  addToCart({ name: productName, code: productCode, elementId, category });
                   onClose();
                 }}
               >

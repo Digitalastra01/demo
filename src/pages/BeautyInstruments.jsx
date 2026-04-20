@@ -164,7 +164,7 @@ const BeautyInstruments = () => {
                 name={item} 
                 idBase={`${catIdx + 1}0`} 
                 idx={idx} 
-                onProductClick={handleProductClick}
+                onProductClick={(prod) => handleProductClick({ ...prod, category: 'beauty' })}
               />
             ))
           ))}
@@ -178,6 +178,7 @@ const BeautyInstruments = () => {
         productName={selectedProduct?.name}
         productCode={selectedProduct?.code}
         elementId={selectedProduct?.elementId}
+        category="beauty"
       />
     </div>
   );

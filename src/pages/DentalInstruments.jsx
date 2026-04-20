@@ -124,7 +124,7 @@ const DentalInstruments = () => {
               name={item} 
               idBase="10" 
               idx={idx} 
-              onProductClick={handleProductClick}
+              onProductClick={(prod) => handleProductClick({ ...prod, category: 'dental' })}
             />
           ))}
         </div>
@@ -137,6 +137,7 @@ const DentalInstruments = () => {
         productName={selectedProduct?.name}
         productCode={selectedProduct?.code}
         elementId={selectedProduct?.elementId}
+        category="dental"
       />
     </div>
   );

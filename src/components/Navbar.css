@@ -198,10 +198,15 @@ body {
   width: 18px;
   height: 18px;
   border-radius: 50%;
+  border: 2px solid var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid var(--primary-dark);
+  pointer-events: none; /* Let click pass through to button */
+}
+
+.search-btn-circle svg {
+  pointer-events: none; /* Let click pass through to button */
 }
 
 .search-input {

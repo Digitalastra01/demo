@@ -6,7 +6,7 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
-  z-index: 2000;
+  z-index: 90000 !important;
 }
 
 .cart-drawer {
@@ -18,7 +18,7 @@
   height: 100%;
   background: #1a1e24;
   color: #fff;
-  z-index: 2001;
+  z-index: 90001 !important;
   display: flex;
   flex-direction: column;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
@@ -214,7 +214,7 @@
   opacity: 1;
 }
 
-.btn-quote {
+.btn-checkout-placeholder {
   background: #bc9c22;
   color: #000;
   border: none;
@@ -229,7 +229,7 @@
   transition: all 0.2s;
 }
 
-.btn-quote:hover {
+.btn-checkout-placeholder:hover {
   background: #d4b43a;
   transform: translateY(-2px);
 }
