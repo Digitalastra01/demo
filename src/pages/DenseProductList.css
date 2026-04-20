@@ -43,8 +43,12 @@
   padding: 1.5rem 2rem;
   border-radius: 4px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.dense-list-item.clickable {
   cursor: pointer;
-  min-height: 80px;
+}
+
+.dense-list-item.clickable:active {
+  transform: scale(0.98);
 }
 
 .dense-list-item:hover {
@@ -73,7 +77,34 @@
 }
 
 .item-actions {
-  display: none; /* Hidden for the pure navigation grid look */
+  display: flex;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.dense-list-item:hover .item-actions {
+  opacity: 1;
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  background: var(--primary-light);
+  color: #000;
+  transform: scale(1.1);
 }
 
 @media (max-width: 1024px) {

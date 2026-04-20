@@ -108,3 +108,24 @@
 .category-card:hover .cat-link {
   gap: 1rem;
 }
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 3rem;
+  }
+  .categories-grid {
+    gap: 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  .category-card {
+    padding: 2rem 1.75rem;
+  }
+  .cat-img-wrapper {
+    height: 180px;
+    margin: -2rem -1.75rem 1.5rem;
+  }
+  .cat-title {
+    font-size: 1.4rem;
+  }
+}
+

@@ -162,3 +162,25 @@
     gap: 4rem;
   }
 }
+
+@media (max-width: 768px) {
+  .about-image-card {
+    height: 400px;
+    padding: 1.5rem;
+  }
+  .about-stats {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .stat {
+    padding: 1rem;
+    min-width: 120px;
+  }
+  .stat h2 {
+    font-size: 2rem;
+  }
+  .about-grid {
+    gap: 3rem;
+  }
+}
+

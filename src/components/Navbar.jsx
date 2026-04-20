@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Phone, Mail, Search, ChevronDown, ChevronRight, Activity } from 'lucide-react';
+import { Menu, X, Phone, Mail, Search, ChevronDown, ChevronRight, Activity, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { dentalCategories, surgicalCategories, beautyCategories } from '../data/categories';
+import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -11,6 +12,7 @@ const Navbar = () => {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [searchResults, setSearchResults] = useState([]);
+  const { cartCount, setIsCartOpen } = useCart();
   const navigate = useNavigate();
 
   const handleSearchSubmit = () => {
@@ -175,6 +177,19 @@ const Navbar = () => {
               </AnimatePresence>
             </div>
             <motion.button 
+              className="search-btn-circle" 
+              aria-label="Cart"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setIsCartOpen(true)}
+              style={{ marginLeft: '0.5rem', position: 'relative' }}
+            >
+              <ShoppingCart size={18} color="var(--primary-dark)" />
+              {cartCount > 0 && (
+                <span className="cart-badge">{cartCount}</span>
+              )}
+            </motion.button>
+            <motion.button 
               className="mobile-toggle" 
               onClick={() => setIsOpen(!isOpen)} 
               aria-label="Toggle Navigation"
@@ -257,22 +272,82 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div 
-            className="mobile-menu"
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.3 }}
+            className="mobile-overflow-menu"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
           >
-            <div className="mobile-menu-inner">
-               <a href="/#about" onClick={() => setIsOpen(false)}>About Us</a>
-               <Link to="/products/beauty-instruments" onClick={() => setIsOpen(false)}>Beauty Instruments</Link>
-               <Link to="/products/dental-instruments" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
-               <Link to="/products/surgical-instruments" onClick={() => setIsOpen(false)}>Surgical Instruments</Link>
-               <a href="#contact" onClick={() => setIsOpen(false)}>Contact Us</a>
+            <div className="mobile-menu-content">
+               <div className="mobile-menu-header">
+                  <div className="mobile-logo-wrapper">
+                    <img src="/logo.png" alt="Logo" className="mobile-logo-small" />
+                  </div>
+                  <button className="mobile-menu-close" onClick={() => setIsOpen(false)}>
+
+                    <X size={28} />
+                  </button>
+               </div>
+
+               <div className="mobile-nav-links">
+                  <a href="/#about" className="mobile-link" onClick={() => setIsOpen(false)}>About Us</a>
+                  
+                  {/* Beauty Instruments Accordion */}
+                  <div className="mobile-accordion">
+                    <button 
+                      className={`mobile-accordion-trigger ${expandedBeautyCategory ? 'active' : ''}`}
+                      onClick={() => setExpandedBeautyCategory(expandedBeautyCategory ? null : 'all')}
+                    >
+                      Beauty Instruments <ChevronDown size={18} className={expandedBeautyCategory ? 'rotate-180' : ''} />
+                    </button>
+                    <AnimatePresence>
+                      {expandedBeautyCategory && (
+                        <motion.div 
+                          className="mobile-accordion-content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                        >
+                          {beautyCategories.map((cat, idx) => (
+                            <div key={idx} className="mobile-submenu-group">
+                              <span className="mobile-submenu-title">{cat.name}</span>
+                              {cat.subItems.map((sub, sIdx) => (
+                                <Link 
+                                  key={sIdx} 
+                                  to={`/products/beauty-instruments#${sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                                  className="mobile-submenu-link"
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  {sub}
+                                </Link>
+                              ))}
+                            </div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  <Link to="/products/dental-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
+                  <Link to="/products/surgical-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Surgical Instruments</Link>
+                  <a href="#contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact Us</a>
+               </div>
+
+               <div className="mobile-menu-footer">
+                  <div className="mobile-contact-info">
+                    <a href="mailto:sales@hnhmanufacturing.com" className="mobile-contact-item">
+                      <Mail size={18} color="var(--primary-light)" /> sales@hnhmanufacturing.com
+                    </a>
+                    <a href="https://wa.me/917189648265" className="mobile-contact-item">
+                      <Phone size={18} color="var(--primary-light)" /> + 91 718 964 8265
+                    </a>
+                  </div>
+               </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
     </motion.nav>
   );
 };

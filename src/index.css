@@ -90,7 +90,7 @@ a {
 }
 
 .heading-lg {
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 800;
   color: var(--text-main);
   text-transform: capitalize;
@@ -98,7 +98,7 @@ a {
 }
 
 .heading-md {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(1.8rem, 4vw, 3.5rem);
   margin-bottom: 1rem;
   color: var(--text-main);
 }
@@ -165,6 +165,12 @@ a {
 .section {
   padding: 8rem 0;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 4rem 0;
+  }
 }
 
 /* Soft Glow for light theme */

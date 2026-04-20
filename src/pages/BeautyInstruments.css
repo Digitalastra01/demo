@@ -88,5 +88,16 @@
 @media (max-width: 768px) {
   .beauty-list-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  .dense-container {
+    padding: 0 1rem 3rem;
+  }
+  .beauty-list-item {
+    padding: 0.85rem 1rem;
+  }
+  .item-actions {
+    opacity: 1; /* Always show actions on touch devices */
   }
 }
+
