@@ -214,24 +214,27 @@
   opacity: 1;
 }
 
-.btn-checkout-placeholder {
-  background: #bc9c22;
-  color: #000;
+.btn-checkout {
+  background: var(--primary);
+  color: #fff;
   border: none;
-  padding: 1rem;
-  border-radius: 4px;
+  padding: 1.25rem;
+  border-radius: 0.75rem;
   font-weight: 600;
+  font-family: 'Outfit', sans-serif;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  transition: all 0.2s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 var(--primary-glow);
 }
 
-.btn-checkout-placeholder:hover {
-  background: #d4b43a;
-  transform: translateY(-2px);
+.btn-checkout:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(13, 148, 136, 0.4);
 }
 
 @media (max-width: 480px) {

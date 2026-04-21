@@ -1,13 +1,20 @@
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Minus, Plus, ShoppingBag, Trash2, Send } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './CartDrawer.css';
 
 const CartDrawer = () => {
   const { cartItems, removeFromCart, updateQuantity, clearCart, isCartOpen, setIsCartOpen, cartCount } = useCart();
+  const navigate = useNavigate();
 
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
+
+  const handleCheckout = () => {
+    setIsCartOpen(false);
+    navigate('/checkout');
+  };
 
   const handleRequestQuote = () => {
     const itemDetails = cartItems
@@ -98,7 +105,7 @@ const CartDrawer = () => {
                 </div>
                 <div className="cart-actions">
                   <button className="btn-clear" onClick={clearCart}>Clear All</button>
-                  <button className="btn-checkout-placeholder" onClick={() => alert("Checkout system coming soon!")}>
+                  <button className="btn-checkout" onClick={handleCheckout}>
                     Checkout
                   </button>
                 </div>

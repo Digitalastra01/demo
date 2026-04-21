@@ -6,6 +6,7 @@ import DentalInstruments from './pages/DentalInstruments';
 import SurgicalInstruments from './pages/SurgicalInstruments';
 
 import BeautyInstruments from './pages/BeautyInstruments';
+import Checkout from './pages/Checkout';
 import { CartProvider } from './context/CartContext';
 import CartDrawer from './components/CartDrawer';
 
@@ -20,6 +21,7 @@ function App() {
             <Route path="/products/dental-instruments" element={<DentalInstruments />} />
             <Route path="/products/surgical-instruments" element={<SurgicalInstruments />} />
             <Route path="/products/beauty-instruments" element={<BeautyInstruments />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
           <Footer />
         </div>
