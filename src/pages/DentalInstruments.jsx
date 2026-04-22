@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ProductImageModal from '../components/ProductImageModal';
 import { useCart } from '../context/CartContext';
-import './DenseProductList.css'; 
+import './ProductGallery.css'; 
 
+// Only including categories that have existing images on the server
 const categories = [
   "Extracting Forceps",
   "Extracting Forceps English Pattern",
@@ -22,52 +23,42 @@ const categories = [
   "Amalgam Guns & Carriers, Retainers, Bands, Strip Holders, Napkin",
   "Rubber Dam Instruments, Rubber Dam Clamps",
   "Syringes, Tweezers, Sterilizing & Lab",
-  "Endodontic Forcepes, Tissue Forcepes, Haemostatic Forcepes, Towel Clamps",
-  "Retractors, Lip & Cheek Retractor, Hook, Depressor & Mouth Gags",
-  "Orthodontic Plier & Cuters, Rongeur",
-  "Needle Holders, Scissors, Micro Surgery Set",
-  "Impression Trays",
-  "Articulators, Hollow Wares",
-  "Scissors, Dissecting Forceps, Needle Holders, Wire Cutting Pliers With Tungsten Carbide Inserts"
+  "Retractors, Lip & Cheek Retractor, Hook, Depressor & Mouth Gags"
 ];
 
-const DentalListItem = ({ name, idBase, idx, onProductClick }) => {
+const DentalProductCard = ({ name, idBase, idx, onProductClick }) => {
   const { addToCart } = useCart();
   const code = `D-${idBase}-${100 + idx}`;
   const elementId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const imagePath = `/images/instruments/dental/${elementId}.png`;
   
   return (
     <div 
       id={elementId} 
-      className="dense-list-item clickable" 
-      onClick={() => onProductClick({ name, code, elementId })}
+      className="gallery-card" 
     >
-      <div className="item-main-info">
-        <div className="item-name">{name}</div>
-        <div className="item-code">{code}</div>
+      <div className="product-image-wrapper" onClick={() => onProductClick({ name, code, elementId, image: imagePath })}>
+        <img 
+          src={imagePath} 
+          alt={name} 
+          className="product-card-img"
+        />
+        <div className="product-card-overlay">
+            <span className="view-label">View Category</span>
+        </div>
       </div>
-      <div className="item-actions">
+      
+      <div className="product-info">
+        <h3 className="product-name">{name}</h3>
+        <p className="product-code">{code}</p>
         <button 
-          className="action-btn" 
-          aria-label="View instrument" 
-          title="View Instrument"
+          className="btn-add-cart-simple" 
           onClick={(e) => {
             e.stopPropagation();
-            onProductClick({ name, code, elementId });
+            addToCart({ name, code, elementId, image: imagePath });
           }}
         >
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-        </button>
-        <button 
-          className="action-btn" 
-          aria-label="Add to cart" 
-          title="Add to Cart" 
-          onClick={(e) => {
-            e.stopPropagation();
-            addToCart({ name, code, elementId });
-          }}
-        >
-          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          Add to Cart
         </button>
       </div>
     </div>
@@ -109,17 +100,10 @@ const DentalInstruments = () => {
 
   return (
     <div className="page-container">
-      {/* Breadcrumb Header */}
-      <div className="breadcrumb-header">
-        <div className="container">
-          <p>Home / Products / Dental Instruments</p>
-        </div>
-      </div>
-
-      <div className="dense-container">
-        <div className="dense-list-grid">
+      <div className="gallery-container" style={{ paddingTop: '50px' }}>
+        <div className="gallery-grid">
           {categories.map((item, idx) => (
-            <DentalListItem 
+            <DentalProductCard 
               key={idx} 
               name={item} 
               idBase="10" 
@@ -133,7 +117,7 @@ const DentalInstruments = () => {
       <ProductImageModal 
         isOpen={!!selectedProduct} 
         onClose={handleCloseModal}
-        imagePath={selectedProduct ? `/images/instruments/dental/${selectedProduct.elementId}.png` : ''}
+        imagePath={selectedProduct?.image || ''}
         productName={selectedProduct?.name}
         productCode={selectedProduct?.code}
         elementId={selectedProduct?.elementId}

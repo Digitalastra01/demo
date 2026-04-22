@@ -72,7 +72,7 @@ const CartDrawer = () => {
                     <div key={item.code} className="cart-item">
                       <div className="cart-item-img">
                         <img 
-                          src={`/images/instruments/${item.category || 'beauty'}/${item.elementId}.png`} 
+                          src={item.image || `/images/instruments/${item.category || 'beauty'}/${item.elementId}.png`} 
                           alt={item.name} 
                           onError={(e) => {
                             e.target.src = 'https://via.placeholder.com/80/1a1e24/ffffff?text=IMG';

@@ -6,10 +6,10 @@
   --bg-alt: #FFFFFF;       /* Pure White */
   --bg-card: rgba(255, 255, 255, 0.85); /* Light translucent card */
   
-  --primary: #0D9488;      /* Surgical Teal / Medical Green */
-  --primary-light: #14B8A6;
-  --primary-dark: #0F766E;
-  --primary-glow: rgba(13, 148, 136, 0.2);
+  --primary: #009688;      /* Refined Teal from image */
+  --primary-light: #26A69A;
+  --primary-dark: #00796B;
+  --primary-glow: rgba(0, 150, 136, 0.2);
 
   --secondary: #0284C7;    /* Clinical Blue */
   --accent: #E11D48;       /* subtle warning/emergency red for contrast if needed */
@@ -22,9 +22,9 @@
   --glass-bg: rgba(255, 255, 255, 0.7);
 
   --border-light: #E2E8F0;
-  --border-glow: inset 0 0 0 1px rgba(13, 148, 136, 0.2);
+  --border-glow: inset 0 0 0 1px rgba(0, 150, 136, 0.2);
 
-  --gradient-text: linear-gradient(90deg, #0D9488, #0284C7);
+  --gradient-text: linear-gradient(90deg, #009688, #0284C7);
   --gradient-bg: linear-gradient(135deg, #FAFAFC 0%, #F1F5F9 100%);
 }
 

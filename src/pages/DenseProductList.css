@@ -28,6 +28,32 @@
   font-size: 0.9rem;
   opacity: 0.8;
   font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.page-main-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.8;
+}
+
+.category-section {
+  margin-bottom: 4rem;
+}
+
+.category-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1a1e24;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--primary-light);
+  display: inline-block;
 }
 
 .dense-list-grid {

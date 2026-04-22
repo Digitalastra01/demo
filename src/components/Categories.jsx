@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Scissors, Stethoscope, Sparkles } from 'lucide-react';
+import { ArrowRight, Scissors, Stethoscope, Sparkles, FileText } from 'lucide-react';
 import './Categories.css';
 
 const categories = [
@@ -10,9 +10,16 @@ const categories = [
     desc: 'Professional hair cutting scissors, tweezers, and premium grooming kits for an elite finish.',
     icon: <Sparkles size={36} />,
     image: '/beauty.png',
-    color: '#0F766E', // Deep Teal
+    color: '#009688', // Refined Teal
     delay: 0.1,
-    file: '/beauty-catalog.pdf'
+    file: '/beauty-catalog.pdf',
+    features: [
+      'Cuticle Nippers',
+      'Nail Nippers',
+      'Pedicure Implements',
+      'Manicure Scissors',
+      'Eyelash Tweezers'
+    ]
   },
   {
     id: 'surgical',
@@ -20,8 +27,16 @@ const categories = [
     desc: 'Scalpels, Scissors, Forceps, Retractors, and specialized diagnostics sets crafted for life-saving precision.',
     icon: <Scissors size={36} />,
     image: '/surgical.png',
-    color: '#0D9488', // Surgical Teal
-    delay: 0.3
+    color: '#009688', // Refined Teal
+    delay: 0.3,
+    file: '/surgical-catalog.pdf',
+    features: [
+      'Scalpels & Knives',
+      'Surgical Scissors',
+      'Forceps & Tweezers',
+      'Needle Holders',
+      'Retractors'
+    ]
   },
   {
     id: 'dental',
@@ -29,8 +44,16 @@ const categories = [
     desc: 'Extracting forceps, Elevators, Orthodontic pliers ensuring perfect grip and performance.',
     icon: <Stethoscope size={36} />,
     image: '/dental.png',
-    color: '#0284C7', // Clinical Blue
-    delay: 0.5
+    color: '#009688', // Refined Teal
+    delay: 0.5,
+    file: '/dental-catalog.pdf',
+    features: [
+      'Extracting Forceps',
+      'Dental Elevators',
+      'Scalers & Curettes',
+      'Mouth Mirrors',
+      'Orthodontic Pliers'
+    ]
   }
 ];
 
@@ -79,52 +102,56 @@ const Categories = () => {
               <h3 className="cat-title">{cat.title}</h3>
               <p className="cat-desc">{cat.desc}</p>
               
-              {cat.id === 'beauty' ? (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem' }}>
-                  <a href={cat.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                    <motion.div 
-                      className="cat-link" 
-                      style={{ color: cat.color }}
-                      whileHover={{ x: 5 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Explore Catalogue <ArrowRight size={18} />
-                    </motion.div>
-                  </a>
-                  <a href={cat.file} download style={{ textDecoration: 'none' }}>
-                    <motion.div 
-                      className="cat-link" 
-                      style={{ color: cat.color }}
-                      whileHover={{ x: 5 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Download PDF <ArrowRight size={18} />
-                    </motion.div>
-                  </a>
+              <div className="cat-content">
+                <div className="cat-features-grid">
+                  {cat.features.map((feature, idx) => (
+                    <div key={idx} className="feature-item">
+                      <div className="feature-check" style={{ backgroundColor: cat.color }}>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      {cat.id === 'beauty' ? (
+                        <Link 
+                          to={`/products/beauty-instruments#${feature.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                          className="feature-text clickable-feature"
+                        >
+                          {feature}
+                        </Link>
+                      ) : (
+                        <span className="feature-text">{feature}</span>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              ) : cat.file ? (
-                <a href={cat.file} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
-                  <motion.div 
-                    className="cat-link" 
-                    style={{ color: cat.color }}
-                    whileHover={{ x: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    View Catalog <ArrowRight size={18} />
-                  </motion.div>
-                </a>
-              ) : (
-                <Link to={`/products/${cat.id}-instruments`} style={{ textDecoration: 'none' }}>
-                  <motion.div 
-                    className="cat-link" 
-                    style={{ color: cat.color }}
-                    whileHover={{ x: 5 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    View Catalog <ArrowRight size={18} />
-                  </motion.div>
-                </Link>
-              )}
+                <div className="cat-actions-wrapper">
+                  <div className="cat-actions">
+                    <Link 
+                      to={`/products/${cat.id}-instruments`} 
+                      className="btn-view-more"
+                      style={{ backgroundColor: cat.color }}
+                      onMouseOver={(e) => e.currentTarget.style.filter = 'brightness(0.9)'}
+                      onMouseOut={(e) => e.currentTarget.style.filter = 'brightness(1)'}
+                    >
+                      View More
+                    </Link>
+                    <a href="#contact" className="btn-contact-us">
+                      Contact Us
+                    </a>
+                  </div>
+                  {cat.file && (
+                    <a 
+                      href={cat.file} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="btn-catalog-link"
+                    >
+                      <FileText size={16} />
+                      <span>View Catalog</span>
+                    </a>
+                  )}
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

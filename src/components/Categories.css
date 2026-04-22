@@ -87,26 +87,123 @@
 
 .cat-desc {
   color: var(--text-muted);
-  margin-bottom: 2.5rem;
-  flex-grow: 1;
+  margin-bottom: 1.5rem;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-.cat-link {
+.cat-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.cat-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.feature-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: white;
+}
+
+.feature-check svg {
+  width: 12px;
+  height: 12px;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+.feature-text.clickable-feature {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.feature-text.clickable-feature:hover {
+  color: var(--primary);
+  transform: translateX(3px);
+  text-decoration: underline;
+}
+
+.cat-actions-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: auto;
+}
+
+.cat-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-view-more {
+  flex: 1;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-contact-us {
+  flex: 1;
+  background-color: #F8F9FA;
+  color: #1A1A1A;
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  border: 1px solid #E2E8F0;
+}
+
+.btn-contact-us:hover {
+  background-color: #E9ECEF;
+  border-color: #CBD5E1;
+}
+
+.btn-catalog-link {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-weight: 700;
-  font-size: 1rem;
-  transition: gap 0.3s ease;
-  font-family: 'Outfit', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  width: fit-content;
 }
 
-.category-card:hover .cat-link {
-  gap: 1rem;
+.btn-catalog-link:hover {
+  text-decoration: underline;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
@@ -127,5 +224,7 @@
   .cat-title {
     font-size: 1.4rem;
   }
+  .cat-features-grid {
+    grid-template-columns: 1fr;
+  }
 }
-

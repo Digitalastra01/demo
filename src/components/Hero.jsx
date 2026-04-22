@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, FileText } from 'lucide-react';
 import './Hero.css';
 
 const slides = [
@@ -8,22 +8,49 @@ const slides = [
     id: 3,
     title: "Beauty Instruments",
     subtitle: "Flawless Execution",
-    desc: "Professional-grade beauty and grooming tools engineered with medical precision for unparalleled performance.",
+    desc: "H&H Manufacturing LLC was established in 1972 to fill the requirement of the time. Now we have achieved unparaller success which is no doubted dedicated to its hardworking employees, marketing and management expertise.",
+    desc2: "To achieve the unique combination of skills and instruments of the finest Quality H&H has devised. H&H is producing & supplying the latest and most comprehensive range of manicure instruments.",
     image: "/beauty.png",
+    catalogFile: "/beauty-catalog.pdf",
+    features: [
+      'Cuticle Nippers',
+      'Nail Nippers',
+      'Pedicure Implements',
+      'Manicure Scissors',
+      'Eyelash Tweezers'
+    ]
   },
   {
     id: 1,
     title: "Surgical Instruments",
     subtitle: "Precision Without Compromise",
-    desc: "We complete almost all manufacturing processes within our state-of-the-art facilities, guaranteeing no compromise on the quality of our instruments.",
+    desc: "H&H Manufacturing LLC was established in 1972 to fill the requirement of the time. Now we have achieved unparaller success which is no doubted dedicated to its hardworking employees, marketing and management expertise.",
+    desc2: "To achieve the unique combination of skills and instruments of the finest Quality H&H has devised. H&H is producing & supplying the latest and most comprehensive range of surgical instruments.",
     image: "/surgical.png",
+    catalogFile: "/surgical-catalog.pdf",
+    features: [
+      'Scalpels & Knives',
+      'Surgical Scissors',
+      'Forceps & Tweezers',
+      'Needle Holders',
+      'Retractors'
+    ]
   },
   {
     id: 2,
     title: "Dental Instruments",
     subtitle: "Crafted for Perfection",
-    desc: "Advanced machining and hand-finishing ensure every dental tool meets the highest global standards for precision and durability.",
+    desc: "H&H Manufacturing LLC was established in 1972 to fill the requirement of the time. Now we have achieved unparaller success which is no doubted dedicated to its hardworking employees, marketing and management expertise.",
+    desc2: "To achieve the unique combination of skills and instruments of the finest Quality H&H has devised. H&H is producing & supplying the latest and most comprehensive range of dental instruments.",
     image: "/dental.png",
+    catalogFile: "/dental-catalog.pdf",
+    features: [
+      'Extracting Forceps',
+      'Dental Elevators',
+      'Scalers & Curettes',
+      'Mouth Mirrors',
+      'Orthodontic Pliers'
+    ]
   }
 ];
 
@@ -36,7 +63,7 @@ const Hero = () => {
   useEffect(() => {
     const timer = setInterval(() => {
       nextSlide();
-    }, 6000);
+    }, 8000); // Slightly slower for reading
     return () => clearInterval(timer);
   }, [current]);
 
@@ -81,63 +108,91 @@ const Hero = () => {
                 {slides[current].title}
               </motion.h1>
               
-              <motion.p 
-                className="slide-subtitle"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.9 }}
-              >
-                {slides[current].desc}
-              </motion.p>
+              <div className="slide-desc-container">
+                <motion.p 
+                  className="slide-subtitle"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.9 }}
+                >
+                  {slides[current].desc}
+                </motion.p>
+                {slides[current].desc2 && (
+                  <motion.p 
+                    className="slide-subtitle second-desc"
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 1.0 }}
+                  >
+                    {slides[current].desc2}
+                  </motion.p>
+                )}
+              </div>
+              
+              {slides[current].features && (
+                <motion.div 
+                  className="hero-features-grid"
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 1.1 }}
+                >
+                  {slides[current].features.map((feature, idx) => (
+                    <div key={idx} className="hero-feature-item">
+                      <div className="hero-feature-check">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                      </div>
+                      <a 
+                        href={`/products/${slides[current].title.toLowerCase().replace(/ /g, '-')}#${feature.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`}
+                        className="hero-feature-link"
+                      >
+                        {feature}
+                      </a>
+                    </div>
+                  ))}
+                </motion.div>
+              )}
               
               <motion.div 
                 className="hero-actions"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.1 }}
+                transition={{ duration: 0.8, delay: 1.2 }}
               >
-                {slides[current].title === "Beauty Instruments" ? (
-                  <>
-                    <motion.a 
-                      href="/beauty-catalog.pdf" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-primary"
-                      whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0, 169, 157, 0.4)' }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Explore Catalog <ArrowRight size={18} />
-                    </motion.a>
-                    <motion.a 
-                      href="/beauty-catalog.pdf" 
-                      download
-                      className="btn-outline"
-                      whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Download PDF
-                    </motion.a>
-                  </>
-                ) : (
-                  <>
-                    <motion.a 
-                      href="#categories" 
-                      className="btn-primary"
-                      whileHover={{ scale: 1.05, boxShadow: '0 5px 15px rgba(0, 169, 157, 0.4)' }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Explore Catalog <ArrowRight size={18} />
-                    </motion.a>
-                    <motion.a 
-                      href="#about" 
-                      className="btn-outline"
-                      whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)', color: '#fff', borderColor: 'var(--primary)' }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                      Learn More
-                    </motion.a>
-                  </>
+                {slides[current].catalogFile && (
+                  <motion.a 
+                    href={slides[current].catalogFile} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-catalog-link"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 1.4 }}
+                  >
+                    <FileText size={16} />
+                    <span>Download PDF Catalog</span>
+                  </motion.a>
                 )}
+
+                <div className="hero-btn-group">
+                  <motion.a 
+                    href={`/products/${slides[current].title.toLowerCase().replace(' ', '-')}`} 
+                    className="btn-hero-teal"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    View More
+                  </motion.a>
+                  <motion.a 
+                    href="#contact" 
+                    className="btn-hero-grey"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    Contact Us
+                  </motion.a>
+                </div>
               </motion.div>
             </motion.div>
           </div>

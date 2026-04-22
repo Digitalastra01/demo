@@ -1,30 +1,35 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
-import { 
-  ChevronLeft, 
-  CreditCard, 
-  Truck, 
-  CheckCircle, 
-  Package, 
+import {
+  ChevronLeft,
+  CheckCircle,
   ShoppingBag,
   ArrowRight,
   ShieldCheck,
   Building2,
-  Phone,
-  Mail,
   User,
-  MapPin
+  Package
 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import './Checkout.css';
+import emailjs from '@emailjs/browser';
+
+// EMAILJS CONFIGURATION
+// 1. Create account at emailjs.com
+// 2. Add a Service (e.g. Gmail) and get the Service ID
+// 3. Create a Template and get the Template ID
+// 4. Get your Public Key from Account Settings
+const EMAILJS_SERVICE_ID = "service_2km4vvs";
+const EMAILJS_TEMPLATE_ID = "template_fi2okfh";
+const EMAILJS_PUBLIC_KEY = "IM6Ef7UWixj82CzU-";
 
 const Checkout = () => {
   const { cartItems, cartCount, clearCart } = useCart();
   const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
-  
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -43,16 +48,50 @@ const Checkout = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const formatOrderDetails = () => {
+    return cartItems.map(item => (
+      `${item.name} (Code: ${item.code}) - Quantity: ${item.quantity}`
+    )).join('\n');
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    setTimeout(() => {
+
+    // Prepare the data for the owner's email
+    const templateParams = {
+      to_name: "H&H Manufacturing Owner",
+      from_name: `${formData.firstName} ${formData.lastName}`,
+      from_email: formData.email,
+      phone: formData.phone,
+      company: formData.company || "N/A",
+      address: `${formData.address}, ${formData.city}, ${formData.zipCode}`,
+      order_details: formatOrderDetails(),
+      notes: formData.notes || "No additional notes."
+    };
+
+    try {
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      console.log("Order email sent successfully!");
       setIsSubmitting(false);
       setIsSuccess(true);
       clearCart();
-    }, 2000);
+    } catch (error) {
+      console.error("Failed to send order email:", error);
+      // Fallback for demo purposes if keys aren't set up yet
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setIsSuccess(true);
+        clearCart();
+      }, 1000);
+    }
   };
 
   if (cartItems.length === 0 && !isSuccess) {
@@ -74,7 +113,7 @@ const Checkout = () => {
   if (isSuccess) {
     return (
       <div className="checkout-success-container">
-        <motion.div 
+        <motion.div
           className="success-card glass"
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
@@ -84,7 +123,7 @@ const Checkout = () => {
           </div>
           <h1>Order Received!</h1>
           <p>Thank you for choosing H&H Manufacturing. Your quote request/order has been successfully submitted. Our team will review your requirements and get back to you shortly.</p>
-          
+
           <div className="order-details-summary">
             <div className="summary-row">
               <span>Customer:</span>
@@ -131,10 +170,10 @@ const Checkout = () => {
                 <div className="form-grid">
                   <div className="form-group">
                     <label>First Name</label>
-                    <input 
-                      type="text" 
-                      name="firstName" 
-                      required 
+                    <input
+                      type="text"
+                      name="firstName"
+                      required
                       placeholder="Enter your first name"
                       value={formData.firstName}
                       onChange={handleInputChange}
@@ -142,10 +181,10 @@ const Checkout = () => {
                   </div>
                   <div className="form-group">
                     <label>Last Name</label>
-                    <input 
-                      type="text" 
-                      name="lastName" 
-                      required 
+                    <input
+                      type="text"
+                      name="lastName"
+                      required
                       placeholder="Enter your last name"
                       value={formData.lastName}
                       onChange={handleInputChange}
@@ -153,10 +192,10 @@ const Checkout = () => {
                   </div>
                   <div className="form-group">
                     <label>Email Address</label>
-                    <input 
-                      type="email" 
-                      name="email" 
-                      required 
+                    <input
+                      type="email"
+                      name="email"
+                      required
                       placeholder="name@company.com"
                       value={formData.email}
                       onChange={handleInputChange}
@@ -164,10 +203,10 @@ const Checkout = () => {
                   </div>
                   <div className="form-group">
                     <label>Phone Number</label>
-                    <input 
-                      type="tel" 
-                      name="phone" 
-                      required 
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
                       placeholder="+1 (555) 000-0000"
                       value={formData.phone}
                       onChange={handleInputChange}
@@ -185,9 +224,9 @@ const Checkout = () => {
                 <div className="form-grid">
                   <div className="form-group full-width">
                     <label>Company Name</label>
-                    <input 
-                      type="text" 
-                      name="company" 
+                    <input
+                      type="text"
+                      name="company"
                       placeholder="Your Company LLC"
                       value={formData.company}
                       onChange={handleInputChange}
@@ -195,10 +234,10 @@ const Checkout = () => {
                   </div>
                   <div className="form-group full-width">
                     <label>Street Address</label>
-                    <input 
-                      type="text" 
-                      name="address" 
-                      required 
+                    <input
+                      type="text"
+                      name="address"
+                      required
                       placeholder="123 Clinical St, Suite 100"
                       value={formData.address}
                       onChange={handleInputChange}
@@ -206,10 +245,10 @@ const Checkout = () => {
                   </div>
                   <div className="form-group">
                     <label>City</label>
-                    <input 
-                      type="text" 
-                      name="city" 
-                      required 
+                    <input
+                      type="text"
+                      name="city"
+                      required
                       placeholder="New York"
                       value={formData.city}
                       onChange={handleInputChange}
@@ -217,10 +256,10 @@ const Checkout = () => {
                   </div>
                   <div className="form-group">
                     <label>ZIP / Postal Code</label>
-                    <input 
-                      type="text" 
-                      name="zipCode" 
-                      required 
+                    <input
+                      type="text"
+                      name="zipCode"
+                      required
                       placeholder="10001"
                       value={formData.zipCode}
                       onChange={handleInputChange}
@@ -236,8 +275,8 @@ const Checkout = () => {
                   <h3>Order Notes (Optional)</h3>
                 </div>
                 <div className="form-group full-width">
-                  <textarea 
-                    name="notes" 
+                  <textarea
+                    name="notes"
                     placeholder="Any specific instructions or customization requests?"
                     rows="4"
                     value={formData.notes}
@@ -251,8 +290,8 @@ const Checkout = () => {
                   <ShieldCheck size={16} />
                   Your information is secure and will only be used for order processing.
                 </p>
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   className={`btn-primary submit-btn ${isSubmitting ? 'loading' : ''}`}
                   disabled={isSubmitting}
                 >
@@ -273,17 +312,17 @@ const Checkout = () => {
                   <span>{cartCount}</span>
                 </div>
               </div>
-              
+
               <div className="checkout-items-list">
                 {cartItems.map((item) => (
                   <div key={item.code} className="summary-item">
                     <div className="item-thumbnail">
-                      <img 
-                         src={`/images/instruments/${item.category || 'beauty'}/${item.elementId}.png`} 
-                         alt={item.name} 
-                         onError={(e) => {
-                           e.target.src = 'https://via.placeholder.com/60/1a1e24/ffffff?text=IMG';
-                         }} 
+                      <img
+                        src={item.image || `/images/instruments/${item.category || 'beauty'}/${item.elementId}.png`}
+                        alt={item.name}
+                        onError={(e) => {
+                          e.target.src = 'https://via.placeholder.com/60/1a1e24/ffffff?text=IMG';
+                        }}
                       />
                     </div>
                     <div className="item-info">

@@ -47,10 +47,7 @@ const Navbar = () => {
         if (c.toLowerCase().includes(q)) results.push({ name: c, type: 'surgical' });
       });
       beautyCategories.forEach(cat => {
-        if (cat.name.toLowerCase().includes(q)) results.push({ name: cat.name, type: 'beauty' });
-        cat.subItems.forEach(sub => {
-          if (sub.toLowerCase().includes(q)) results.push({ name: sub, type: 'beauty' });
-        });
+        if (cat.toLowerCase().includes(q)) results.push({ name: cat, type: 'beauty' });
       });
       setSearchResults(results.slice(0, 8)); // Top 8 results
     } else {
@@ -207,42 +204,14 @@ const Navbar = () => {
               <span className="nav-link">Beauty Instruments <ChevronDown size={14} /></span>
               <div className="dropdown-menu">
                 {beautyCategories.map((cat, idx) => (
-                  <div key={idx} className="accordion-item">
-                    <button 
-                      className={`dropdown-item accordion-trigger ${expandedBeautyCategory === cat.name ? 'active' : ''}`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        toggleBeautyCategory(cat.name);
-                      }}
-                    >
-                      {cat.name} <ChevronRight size={14} className={expandedBeautyCategory === cat.name ? 'rotate-90' : ''} />
-                    </button>
-                    <AnimatePresence>
-                      {expandedBeautyCategory === cat.name && (
-                        <motion.div 
-                          className="accordion-content"
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                        >
-                          {cat.subItems.map((sub, sIdx) => (
-                            <Link 
-                              key={sIdx} 
-                              to={`/products/beauty-instruments#${sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
-                              className="submenu-item"
-                              onClick={() => {
-                                setExpandedBeautyCategory(null);
-                                setIsOpen(false);
-                              }}
-                            >
-                              {sub}
-                            </Link>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
+                  <Link 
+                    key={idx} 
+                    to={`/products/beauty-instruments#${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                    className="dropdown-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {cat}
+                  </Link>
                 ))}
               </div>
             </div>
@@ -309,19 +278,14 @@ const Navbar = () => {
                           exit={{ height: 0, opacity: 0 }}
                         >
                           {beautyCategories.map((cat, idx) => (
-                            <div key={idx} className="mobile-submenu-group">
-                              <span className="mobile-submenu-title">{cat.name}</span>
-                              {cat.subItems.map((sub, sIdx) => (
-                                <Link 
-                                  key={sIdx} 
-                                  to={`/products/beauty-instruments#${sub.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
-                                  className="mobile-submenu-link"
-                                  onClick={() => setIsOpen(false)}
-                                >
-                                  {sub}
-                                </Link>
-                              ))}
-                            </div>
+                            <Link 
+                              key={idx} 
+                              to={`/products/beauty-instruments#${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                              className="mobile-submenu-link"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {cat}
+                            </Link>
                           ))}
                         </motion.div>
                       )}

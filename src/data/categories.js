@@ -57,62 +57,13 @@ export const surgicalCategories = [
 ];
 
 export const beautyCategories = [
-  {
-    name: "Manicure",
-    subItems: [
-      "Nail Clippers (Straight / Curved)",
-      "Cuticle Nippers",
-      "Cuticle Pushers",
-      "Nail Scissors",
-      "Nail Files (Metal / Glass / Emery Board)",
-      "Nail Buffers",
-      "Nail Cleaners",
-      "Cuticle Knives",
-      "Nail Lifter / Ingrown Nail Tools"
-    ]
-  },
-  {
-    name: "Pedicure",
-    subItems: [
-      "Heavy Duty Nail Clippers",
-      "Corn Cutters",
-      "Callus Removers",
-      "Foot Files / Rasps",
-      "Heel Scrapers",
-      "Ingrown Nail Tools",
-      "Pedicure Knives / Blades"
-    ]
-  },
-  {
-    name: "Eyelash & Eyebrow",
-    subItems: [
-      "Eyebrow Tweezers (Slant / Pointed / Flat)",
-      "Eyelash Curlers",
-      "Eyebrow Scissors",
-      "Lash Applicators",
-      "Brow Razors",
-      "Eyebrow Trimmers"
-    ]
-  },
-  {
-    name: "Skin Care",
-    subItems: [
-      "Blackhead Removers / Comedone Extractors",
-      "Acne Needles",
-      "Facial Rollers (Metal/Stone handle tools)",
-      "Skin Scrapers",
-      "Pimple Extractors",
-      "Derma Rollers"
-    ]
-  },
-  {
-    name: "Hair Removal",
-    subItems: [
-      "Facial Razors",
-      "Dermaplaning Tools",
-      "Waxing Spatulas (Metal)",
-      "Epilators (Manual tools)",
-      "Threading Tools (Spring type)"
-    ]
-  }
+  "Cuticle Nippers",
+  "Nail Nippers",
+  "Pedicure Implements",
+  "Manicure Scissors",
+  "Eyelash Tweezers",
+  "Eyebrow Tweezers",
+  "Esthetic Tools And Pushers",
+  "Manicure Kits",
+  "Packaging"
 ];
