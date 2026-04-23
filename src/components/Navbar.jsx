@@ -277,14 +277,26 @@ const Navbar = () => {
                   
                   {/* Beauty Instruments Accordion */}
                   <div className="mobile-accordion">
-                    <button 
-                      className={`mobile-accordion-trigger ${expandedBeautyCategory ? 'active' : ''}`}
-                      onClick={() => setExpandedBeautyCategory(expandedBeautyCategory ? null : 'all')}
-                    >
-                      Beauty Instruments <ChevronDown size={18} className={expandedBeautyCategory ? 'rotate-180' : ''} />
-                    </button>
+                    <div className="mobile-accordion-header">
+                      <Link 
+                        to="/products/beauty-instruments" 
+                        className="mobile-link"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Beauty Instruments
+                      </Link>
+                      <button 
+                        className={`mobile-accordion-toggle ${expandedBeautyCategory ? 'active' : ''}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setExpandedBeautyCategory(expandedBeautyCategory === 'beauty' ? null : 'beauty');
+                        }}
+                      >
+                        <ChevronDown size={18} className={expandedBeautyCategory === 'beauty' ? 'rotate-180' : ''} />
+                      </button>
+                    </div>
                     <AnimatePresence>
-                      {expandedBeautyCategory && (
+                      {expandedBeautyCategory === 'beauty' && (
                         <motion.div 
                           className="mobile-accordion-content"
                           initial={{ height: 0, opacity: 0 }}
@@ -306,8 +318,91 @@ const Navbar = () => {
                     </AnimatePresence>
                   </div>
 
-                  <Link to="/products/surgical-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Surgical Instruments</Link>
-                  <Link to="/products/dental-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
+                  {/* Surgical Instruments Accordion */}
+                  <div className="mobile-accordion">
+                    <div className="mobile-accordion-header">
+                      <Link 
+                        to="/products/surgical-instruments" 
+                        className="mobile-link"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Surgical Instruments
+                      </Link>
+                      <button 
+                        className={`mobile-accordion-toggle ${expandedBeautyCategory === 'surgical' ? 'active' : ''}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setExpandedBeautyCategory(expandedBeautyCategory === 'surgical' ? null : 'surgical');
+                        }}
+                      >
+                        <ChevronDown size={18} className={expandedBeautyCategory === 'surgical' ? 'rotate-180' : ''} />
+                      </button>
+                    </div>
+                    <AnimatePresence>
+                      {expandedBeautyCategory === 'surgical' && (
+                        <motion.div 
+                          className="mobile-accordion-content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                        >
+                          {surgicalCategories.map((cat, idx) => (
+                            <Link 
+                              key={idx} 
+                              to={`/products/surgical-instruments/${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                              className="mobile-submenu-link"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {cat}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Dental Instruments Accordion */}
+                  <div className="mobile-accordion">
+                    <div className="mobile-accordion-header">
+                      <Link 
+                        to="/products/dental-instruments" 
+                        className="mobile-link"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Dental Instruments
+                      </Link>
+                      <button 
+                        className={`mobile-accordion-toggle ${expandedBeautyCategory === 'dental' ? 'active' : ''}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          setExpandedBeautyCategory(expandedBeautyCategory === 'dental' ? null : 'dental');
+                        }}
+                      >
+                        <ChevronDown size={18} className={expandedBeautyCategory === 'dental' ? 'rotate-180' : ''} />
+                      </button>
+                    </div>
+                    <AnimatePresence>
+                      {expandedBeautyCategory === 'dental' && (
+                        <motion.div 
+                          className="mobile-accordion-content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: 'auto', opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                        >
+                          {dentalCategories.map((cat, idx) => (
+                            <Link 
+                              key={idx} 
+                              to={`/products/dental-instruments/${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                              className="mobile-submenu-link"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {cat}
+                            </Link>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                   <a href="/#contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact Us</a>
                </div>
 
