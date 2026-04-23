@@ -85,8 +85,8 @@ const Events = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true, margin: "-50px" }}
         >
-          <h4 className="section-subtitle text-gradient">Connect With Us</h4>
-          <h2 className="heading-md">EVENTS & EXHIBITIONS</h2>
+          <span className="section-subtitle text-gradient">Connect With Us</span>
+          <h2 className="heading-md">EVENTS &amp; EXHIBITIONS</h2>
           <p className="section-desc">Catch us at international trade shows and exhibitions to see our premium instruments firsthand.</p>
         </motion.div>
 

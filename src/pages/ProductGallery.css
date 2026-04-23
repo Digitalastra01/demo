@@ -1,6 +1,6 @@
 /* BeautyInstruments.css */
 .page-container {
-  padding-top: 100px;
+  padding-top: 10px;
   background-color: #f8f9fa;
   min-height: 100vh;
 }
@@ -8,8 +8,8 @@
 .breadcrumb-header {
   background: #1a1e24;
   color: #fff;
-  padding: 4rem 0;
-  margin-bottom: 4rem;
+  padding: 3rem 1rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -171,6 +171,135 @@
   box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3);
 }
 
+/* Quick Navigation Styles */
+.quick-nav-section {
+  margin-bottom: 4rem;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+}
+
+.quick-nav-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.quick-nav-title::before {
+  content: '';
+  width: 4px;
+  height: 24px;
+  background: #0d9488;
+  border-radius: 10px;
+}
+
+.quick-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.quick-nav-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+  background: #f8fafc;
+  border-radius: 1rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1.5px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.quick-nav-card:hover {
+  background: #fff;
+  border-color: #0d9488;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(13, 148, 136, 0.1);
+}
+
+.quick-nav-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #334155;
+  transition: color 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-name {
+  color: #0d9488;
+}
+
+.quick-nav-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0d9488;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-indicator {
+  transform: scaleX(1);
+}
+
+/* Standalone Category Page Styles */
+.category-header-standalone {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.back-btn-minimal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.back-btn-minimal:hover {
+  transform: translateX(-5px);
+  color: var(--primary-dark);
+}
+
+.category-standalone-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+.category-title-underline {
+  width: 80px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+.empty-category-msg {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 1.5rem;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  border: 1px dashed var(--border-light);
+}
+
 @media (max-width: 1200px) {
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
@@ -185,13 +314,39 @@
   .page-main-title {
     font-size: 2.8rem;
   }
+  .quick-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .category-standalone-title {
+    font-size: 2.2rem;
+  }
 }
 
 @media (max-width: 500px) {
   .gallery-grid {
     grid-template-columns: 1fr;
+    padding-top: 20px;
   }
   .gallery-container {
     padding: 0 1rem 5rem;
+  }
+  .page-main-title {
+    font-size: 2rem;
+  }
+  .page-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .category-heading {
+    font-size: 1.8rem;
+  }
+  .quick-nav-grid {
+    grid-template-columns: 1fr;
+  }
+  .quick-nav-section {
+    padding: 1.5rem;
+  }
+  .category-standalone-title {
+    font-size: 1.8rem;
   }
 }

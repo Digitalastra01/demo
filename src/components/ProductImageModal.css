@@ -18,8 +18,8 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   width: 100%;
-  max-width: 800px;
-  max-height: 90vh;
+  max-width: 1000px;
+  max-height: 95vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -69,24 +69,23 @@
 
 .product-modal-body {
   flex: 1;
-  padding: 2rem;
+  padding: 0; /* Remove padding to let image fill space */
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f8f9fa; /* Light background for the instrument to pop */
+  background: #ffffff; 
   overflow: hidden;
 }
 
 .product-image-container {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 750px; /* Increased height */
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
   background: white;
-  border: 1px solid #ddd;
 }
 
 .product-main-image {

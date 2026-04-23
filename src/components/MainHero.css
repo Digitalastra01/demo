@@ -1,0 +1,237 @@
+.main-hero-container {
+  max-width: 1400px;
+  margin: 2rem auto 3rem;
+  padding: 0 2rem;
+}
+
+.top-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.top-cat-info {
+  text-align: center;
+  padding: 1.5rem 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.top-cat-title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.top-cat-subtitle {
+  font-size: 1.2rem;
+  color: #64748B;
+  margin: 0.25rem 0 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.top-cat-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.top-cat-btn-primary {
+  flex: 1;
+  background-color: #0D9488;
+  color: white;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  transition: all 0.2s ease;
+  border: 1.5px solid #0D9488;
+}
+
+.top-cat-btn-primary:hover {
+  filter: brightness(0.9);
+  transform: translateY(-1px);
+}
+
+.top-cat-btn-outline {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.88rem;
+  min-height: 44px;
+  background: transparent;
+  border: 1.5px solid #0D9488;
+  color: #0D9488;
+  transition: all 0.2s ease;
+}
+
+.top-cat-btn-outline:hover {
+  background: #0D9488;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.top-cat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.top-cat-img-wrapper {
+  aspect-ratio: 4 / 3; /* Slightly more rectangular, less boxy */
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.top-cat-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.top-cat-card:hover .top-cat-img {
+  transform: scale(1.05);
+}
+
+.top-cat-info {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.top-cat-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  letter-spacing: -1px;
+  line-height: 1;
+}
+
+.top-cat-subtitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 0;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.featured-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #000;
+  margin-bottom: 0.25rem;
+}
+
+.featured-sub-text {
+  color: #666;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.view-all-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: 1.5px solid #0D9488;
+  border-radius: 50px;
+  color: #0D9488;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #0D9488;
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .top-cat-title {
+    font-size: 2rem;
+  }
+  .top-cat-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-hero-container {
+    padding: 0 1rem;
+    margin: 1.5rem auto 2rem;
+  }
+
+  .top-categories-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .top-cat-title {
+    font-size: 1.8rem;
+  }
+
+  .top-cat-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .featured-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+  }
+  
+  .view-all-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-hero-container {
+    padding: 0 0.75rem;
+    margin: 1rem auto;
+  }
+  .top-cat-title {
+    font-size: 1.5rem;
+  }
+  .top-cat-subtitle {
+    font-size: 1rem;
+  }
+  .top-cat-info {
+    padding: 1.25rem 1rem;
+  }
+  .featured-main-title {
+    font-size: 1.6rem;
+  }
+}

@@ -1,18 +1,21 @@
-import Hero from '../components/Hero';
+import MainHero from '../components/MainHero';
+import WhoAreWe from '../components/WhoAreWe';
 import About from '../components/About';
 import Categories from '../components/Categories';
+import BeautyShowcase from '../components/BeautyShowcase';
 import Testimonials from '../components/Testimonials';
 import Events from '../components/Events';
 
 const Home = () => {
   return (
-    <>
-      <Hero />
+    <div>
+      <MainHero />
+      <WhoAreWe />
+      <BeautyShowcase />
       <About />
-      <Categories />
       <Testimonials />
       <Events />
-    </>
+    </div>
   );
 };
 

@@ -57,13 +57,23 @@ export const surgicalCategories = [
 ];
 
 export const beautyCategories = [
-  "Cuticle Nippers",
-  "Nail Nippers",
-  "Pedicure Implements",
-  "Manicure Scissors",
-  "Eyelash Tweezers",
-  "Eyebrow Tweezers",
-  "Esthetic Tools And Pushers",
+  "Choice of Packings",
+  "Choice of Finishes",
+  "Nail & Cuticle scissors",
+  "Cuticle nippers",
+  "Nail nippers",
+  "Corner cutters",
+  "Pedicure nail cutters",
+  "German forging",
+  "Tweezers",
+  "Instruments for professional application",
+  "Choice of finishes in Barber & Thinning Scissors",
+  "Professional Barber & Thinning scissors",
+  "Barber & Thinning scissors kits",
+  "Professional Barber scissors",
+  "Professional Thinning scissors",
+  "Thinning scissors (CNC)",
+  "Pet Grooming scissors",
   "Manicure Kits",
-  "Packaging"
+  "Manicure Display"
 ];

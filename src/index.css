@@ -17,8 +17,13 @@
   --text-main: #0F172A;    /* Dark Slate for pristine text */
   --text-muted: #64748B;   /* Professional Gray */
   
-  --glass-border: rgba(255, 255, 255, 0.6);
-  --glass-shadow: 0 8px 32px 0 rgba(15, 23, 42, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 
+    0 4px 6px rgba(15, 23, 42, 0.05),
+    0 12px 24px rgba(15, 23, 42, 0.1),
+    0 24px 48px rgba(15, 23, 42, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 1),
+    inset 0 -2px 5px rgba(15, 23, 42, 0.02);
   --glass-bg: rgba(255, 255, 255, 0.7);
 
   --border-light: #E2E8F0;
@@ -46,6 +51,14 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   position: relative;
+  /* Leave room for fixed navbar on all screens */
+  padding-top: 90px;
+}
+@media (max-width: 850px) {
+  body { padding-top: 70px; }
+}
+@media (max-width: 360px) {
+  body { padding-top: 60px; }
 }
 
 /* Dynamic animated grid background (Light version) */
@@ -89,6 +102,45 @@ a {
   padding: 0 1.5rem;
 }
 
+/* Global Section Header — always centered, always stacked, never overflows */
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.section-header > * {
+  max-width: 100%;
+  word-break: normal;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Subtitle pill used in all sections */
+.section-subtitle {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(0, 150, 136, 0.08);
+  border: 1px solid rgba(0, 150, 136, 0.25);
+  padding: 0.35rem 1rem;
+  border-radius: 50px;
+  margin-bottom: 1.25rem;
+  font-family: 'Outfit', sans-serif;
+  align-self: center;
+}
+
 .heading-lg {
   font-size: clamp(2.5rem, 6vw, 5rem);
   font-weight: 800;
@@ -119,25 +171,40 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--primary);
+  background: linear-gradient(180deg, var(--primary-light), var(--primary-dark));
   color: #fff;
   padding: 0.85rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
   font-family: 'Outfit', sans-serif;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: none;
+  border: 1px solid rgba(0,0,0,0.1);
   cursor: pointer;
-  box-shadow: 0 4px 14px 0 var(--primary-glow);
+  box-shadow: 
+    0 6px 12px var(--primary-glow),
+    0 2px 4px rgba(0,0,0,0.1),
+    inset 0 1px 1px rgba(255,255,255,0.4),
+    inset 0 -3px 0 rgba(0,0,0,0.15);
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(13, 148, 136, 0.4);
-  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 16px rgba(13, 148, 136, 0.3),
+    0 4px 8px rgba(0,0,0,0.15),
+    inset 0 1px 1px rgba(255,255,255,0.4),
+    inset 0 -3px 0 rgba(0,0,0,0.15);
+  filter: brightness(1.05);
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: 
+    0 2px 4px rgba(13, 148, 136, 0.2),
+    inset 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .btn-outline {
@@ -145,31 +212,57 @@ a {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: #fff;
-  color: var(--primary);
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
+  color: var(--text-main);
   padding: 0.85rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
   font-family: 'Outfit', sans-serif;
   transition: all 0.3s ease;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--border-light);
   cursor: pointer;
+  box-shadow: 
+    0 4px 6px rgba(0,0,0,0.05),
+    inset 0 1px 1px rgba(255,255,255,1),
+    inset 0 -2px 0 rgba(0,0,0,0.05);
 }
 
 .btn-outline:hover {
-  background: rgba(13, 148, 136, 0.05);
+  background: linear-gradient(180deg, #f8fafc, #f1f5f9);
   transform: translateY(-2px);
-  box-shadow: var(--glass-shadow);
+  box-shadow: 
+    0 6px 12px rgba(0,0,0,0.08),
+    inset 0 1px 1px rgba(255,255,255,1),
+    inset 0 -2px 0 rgba(0,0,0,0.05);
+}
+
+.btn-outline:active {
+  transform: translateY(1px);
+  box-shadow: 
+    0 1px 2px rgba(0,0,0,0.05),
+    inset 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .section {
-  padding: 8rem 0;
+  padding: 6rem 1.5rem;
   position: relative;
+  overflow: hidden; /* prevents child elements from creating horizontal scroll */
 }
 
 @media (max-width: 768px) {
   .section {
-    padding: 4rem 0;
+    padding: 3.5rem 1.25rem;
+  }
+}
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+  .heading-lg {
+    font-size: clamp(1.8rem, 8vw, 3rem);
+  }
+  .heading-md {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
   }
 }
 

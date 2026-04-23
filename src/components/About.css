@@ -86,14 +86,7 @@
   font-size: 0.85rem;
 }
 
-.section-subtitle {
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  font-family: 'Outfit', sans-serif;
-  font-weight: 700;
-}
+
 
 .about-description {
   color: var(--text-muted);
@@ -165,7 +158,7 @@
 
 @media (max-width: 768px) {
   .about-image-card {
-    height: 400px;
+    height: 360px;
     padding: 1.5rem;
   }
   .about-stats {
@@ -180,7 +173,30 @@
     font-size: 2rem;
   }
   .about-grid {
-    gap: 3rem;
+    gap: 2.5rem;
   }
 }
 
+@media (max-width: 480px) {
+  .about-image-card {
+    height: 280px;
+    padding: 1rem;
+  }
+  .stat h2 {
+    font-size: 1.75rem;
+  }
+  .stat p {
+    font-size: 0.75rem;
+  }
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .feature-item {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  .feature-item h4 {
+    font-size: 1rem;
+  }
+}

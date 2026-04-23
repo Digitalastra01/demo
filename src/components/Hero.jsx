@@ -13,11 +13,11 @@ const slides = [
     image: "/beauty.png",
     catalogFile: "/beauty-catalog.pdf",
     features: [
-      'Cuticle Nippers',
-      'Nail Nippers',
-      'Pedicure Implements',
-      'Manicure Scissors',
-      'Eyelash Tweezers'
+      'Nail & Cuticle scissors',
+      'Cuticle nippers',
+      'Nail nippers',
+      'Tweezers',
+      'Instruments for professional application'
     ]
   },
   {

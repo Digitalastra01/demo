@@ -1,1330 +1,764 @@
 export const beautyProductsData = [
   {
-    "title": "Cuticle Nippers",
-    "folder": "cuticle nipper",
+    "title": "Choice of Packings",
     "items": [
       {
-        "name": "Cuticle Nippers #BC-2366",
-        "code": "BC-2366",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1366-pic-2.jpg"
+        "name": "Choice of Packings ",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of packaging/Screenshot 2026-04-23 124631.png"
       },
       {
-        "name": "Cuticle Nippers #BC-2367",
-        "code": "BC-2367",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1367-pic-2.jpg"
+        "name": "Choice of Packings",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of packaging/Screenshot 2026-04-23 124645.png"
       },
       {
-        "name": "Cuticle Nippers #BC-2368",
-        "code": "BC-2368",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1368-pic-2.jpg"
+        "name": "Choice of Packings",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of packaging/Screenshot 2026-04-23 124706.png"
       },
       {
-        "name": "Cuticle Nippers #BC-2369",
-        "code": "BC-2369",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1369-pic-2.jpg"
+        "name": "Choice of Packings ",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of packaging/Screenshot 2026-04-23 124738.png"
       },
       {
-        "name": "Cuticle Nippers #BC-2370",
-        "code": "BC-2370",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1370-pic-2.jpg"
+        "name": "Choice of Packings",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of packaging/Screenshot 2026-04-23 124800.png"
       },
       {
-        "name": "Cuticle Nippers #BC-2371",
-        "code": "BC-2371",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1371-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2372",
-        "code": "BC-2372",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1372-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2373",
-        "code": "BC-2373",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1373-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2374",
-        "code": "BC-2374",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1374-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2375",
-        "code": "BC-2375",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1375-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2376",
-        "code": "BC-2376",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1376-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2377",
-        "code": "BC-2377",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1377-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2378",
-        "code": "BC-2378",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1378-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2379",
-        "code": "BC-2379",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1379-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2380",
-        "code": "BC-2380",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1380-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2381",
-        "code": "BC-2381",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1381-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2382",
-        "code": "BC-2382",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1382-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2383",
-        "code": "BC-2383",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1383-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2384",
-        "code": "BC-2384",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1384-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2385",
-        "code": "BC-2385",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1385-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2386",
-        "code": "BC-2386",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1386-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2387",
-        "code": "BC-2387",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1387-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2388",
-        "code": "BC-2388",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1388-pic-2.jpg"
-      },
-      {
-        "name": "Cuticle Nippers #BC-2389",
-        "code": "BC-2389",
-        "image": "/images/instruments/beauty/beauty/cuticle nipper/779718134-1389-pic-2.jpg"
+        "name": "Choice of Packings",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of packaging/Screenshot 2026-04-23 124808.png"
       }
     ]
   },
   {
-    "title": "Esthetic Tools And Pushers",
-    "folder": "esthetic-tools-and-pushers",
+    "title": "Choice of Finishes",
     "items": [
       {
-        "name": "Esthetic Tools And Pushers #BE-5527",
-        "code": "BE-5527",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1527-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 125049.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5528",
-        "code": "BE-5528",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1528-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 125103.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5529",
-        "code": "BE-5529",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1529-pic-2.jpg"
+        "name": "Choice of Finishes ",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 125114.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5530",
-        "code": "BE-5530",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1530-pic-2.jpg"
+        "name": "Choice of Finishes ",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 125125.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5531",
-        "code": "BE-5531",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1531-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 125134.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5532",
-        "code": "BE-5532",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1532-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 125143.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5533",
-        "code": "BE-5533",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1533-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 132608.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5534",
-        "code": "BE-5534",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1534-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 132614.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5535",
-        "code": "BE-5535",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1535-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 132619.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5536",
-        "code": "BE-5536",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1536-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 132625.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5537",
-        "code": "BE-5537",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1537-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 132631.png"
       },
       {
-        "name": "Esthetic Tools And Pushers #BE-5538",
-        "code": "BE-5538",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1538-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5539",
-        "code": "BE-5539",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1539-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5540",
-        "code": "BE-5540",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1540-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5541",
-        "code": "BE-5541",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1541-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5542",
-        "code": "BE-5542",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1542-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5543",
-        "code": "BE-5543",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1543-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5544",
-        "code": "BE-5544",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1544-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5545",
-        "code": "BE-5545",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1545-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5546",
-        "code": "BE-5546",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1546-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5547",
-        "code": "BE-5547",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1547-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5548",
-        "code": "BE-5548",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1548-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5549",
-        "code": "BE-5549",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1549-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5550",
-        "code": "BE-5550",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1550-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5551",
-        "code": "BE-5551",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1551-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5552",
-        "code": "BE-5552",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1552-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5553",
-        "code": "BE-5553",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1553-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5554",
-        "code": "BE-5554",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1554-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5555",
-        "code": "BE-5555",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1555-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5556",
-        "code": "BE-5556",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1556-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5557",
-        "code": "BE-5557",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1557-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5558",
-        "code": "BE-5558",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1558-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5559",
-        "code": "BE-5559",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1559-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5560",
-        "code": "BE-5560",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1560-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5561",
-        "code": "BE-5561",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1561-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5562",
-        "code": "BE-5562",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1562-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5563",
-        "code": "BE-5563",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1563-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5564",
-        "code": "BE-5564",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1564-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5565",
-        "code": "BE-5565",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1565-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5566",
-        "code": "BE-5566",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1566-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5567",
-        "code": "BE-5567",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1567-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5568",
-        "code": "BE-5568",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1568-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5569",
-        "code": "BE-5569",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1569-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5570",
-        "code": "BE-5570",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1570-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5571",
-        "code": "BE-5571",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1571-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5572",
-        "code": "BE-5572",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1572-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5573",
-        "code": "BE-5573",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1573-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5574",
-        "code": "BE-5574",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1574-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5575",
-        "code": "BE-5575",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1575-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5576",
-        "code": "BE-5576",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1576-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5577",
-        "code": "BE-5577",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1577-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5578",
-        "code": "BE-5578",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1578-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5579",
-        "code": "BE-5579",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1579-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5580",
-        "code": "BE-5580",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1580-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5581",
-        "code": "BE-5581",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1581-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5582",
-        "code": "BE-5582",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1582-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5583",
-        "code": "BE-5583",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1583-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5584",
-        "code": "BE-5584",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1584-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5585",
-        "code": "BE-5585",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1585-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5586",
-        "code": "BE-5586",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1586-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5587",
-        "code": "BE-5587",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1587-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5588",
-        "code": "BE-5588",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1588-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5589",
-        "code": "BE-5589",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1589-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5590",
-        "code": "BE-5590",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1590-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5591",
-        "code": "BE-5591",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1591-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5592",
-        "code": "BE-5592",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1592-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5593",
-        "code": "BE-5593",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1593-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5594",
-        "code": "BE-5594",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1594-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5595",
-        "code": "BE-5595",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1595-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5596",
-        "code": "BE-5596",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1596-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5597",
-        "code": "BE-5597",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1597-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5598",
-        "code": "BE-5598",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1598-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5599",
-        "code": "BE-5599",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1599-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5600",
-        "code": "BE-5600",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1600-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5601",
-        "code": "BE-5601",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1601-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5602",
-        "code": "BE-5602",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1602-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5603",
-        "code": "BE-5603",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1603-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5604",
-        "code": "BE-5604",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1604-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5605",
-        "code": "BE-5605",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1605-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5606",
-        "code": "BE-5606",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1606-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5607",
-        "code": "BE-5607",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1607-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5608",
-        "code": "BE-5608",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1608-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5609",
-        "code": "BE-5609",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1609-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5610",
-        "code": "BE-5610",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1610-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5611",
-        "code": "BE-5611",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1611-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5612",
-        "code": "BE-5612",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1612-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5613",
-        "code": "BE-5613",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1613-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5614",
-        "code": "BE-5614",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1614-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5615",
-        "code": "BE-5615",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1615-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5616",
-        "code": "BE-5616",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1616-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5617",
-        "code": "BE-5617",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1617-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5618",
-        "code": "BE-5618",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1618-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5619",
-        "code": "BE-5619",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1619-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5620",
-        "code": "BE-5620",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1620-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5621",
-        "code": "BE-5621",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1621-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5622",
-        "code": "BE-5622",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1622-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5623",
-        "code": "BE-5623",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1623-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5624",
-        "code": "BE-5624",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1624-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5625",
-        "code": "BE-5625",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1625-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5626",
-        "code": "BE-5626",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1626-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5627",
-        "code": "BE-5627",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1627-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5628",
-        "code": "BE-5628",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1628-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5629",
-        "code": "BE-5629",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1629-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5630",
-        "code": "BE-5630",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1630-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5631",
-        "code": "BE-5631",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1631-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5632",
-        "code": "BE-5632",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1632-pic-2.jpg"
-      },
-      {
-        "name": "Esthetic Tools And Pushers #BE-5640",
-        "code": "BE-5640",
-        "image": "/images/instruments/beauty/beauty/esthetic-tools-and-pushers/740997169-1640-pic-2.jpg"
+        "name": "Choice of Finishes",
+        "code": "",
+        "image": "/images/instruments/beauty/new-beauty/choice of finishes/Screenshot 2026-04-23 132639.png"
       }
     ]
   },
   {
-    "title": "Eyebrow Tweezers",
-    "folder": "eyebrow-tweezers",
+    "title": "Nail & Cuticle scissors",
     "items": [
       {
-        "name": "Eyebrow Tweezers #BT-4456",
-        "code": "BT-4456",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1456-pic-2.jpg"
+        "name": "Nail & Cuticle scissors",
+        "code": "1001 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125313.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4457",
-        "code": "BT-4457",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1457-pic-2.jpg"
+        "name": "Nail & Cuticle scissors",
+        "code": "1003 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125321.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4458",
-        "code": "BT-4458",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1458-pic-2.jpg"
+        "name": "Nail & Cuticle scissors",
+        "code": "1005 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125332.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4459",
-        "code": "BT-4459",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1459-pic-2.jpg"
+        "name": "Nail & Cuticle scissors",
+        "code": "1007 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125342.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4460",
-        "code": "BT-4460",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1460-pic-2.jpg"
+        "name": "Nail & Cuticle scissors",
+        "code": "1009 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125351.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4461",
-        "code": "BT-4461",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1461-pic-2.jpg"
+        "name": "Nail & Cuticle scissors ",
+        "code": "1011 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125359.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4462",
-        "code": "BT-4462",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1462-pic-2.jpg"
+        "name": "Nail & Cuticle scissors",
+        "code": "1013 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125408.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4463",
-        "code": "BT-4463",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1463-pic-2.jpg"
+        "name": "Nail & Cuticle scissors ",
+        "code": "1015 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125418.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4464",
-        "code": "BT-4464",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1464-pic-2.jpg"
+        "name": "Nail & Cuticle scissors ",
+        "code": "1020 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125433.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4465",
-        "code": "BT-4465",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1465-pic-2.jpg"
+        "name": "Nail & Cuticle scissors ",
+        "code": "1025 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125442.png"
       },
       {
-        "name": "Eyebrow Tweezers #BT-4466",
-        "code": "BT-4466",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1466-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4467",
-        "code": "BT-4467",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1467-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4468",
-        "code": "BT-4468",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1468-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4469",
-        "code": "BT-4469",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1469-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4470",
-        "code": "BT-4470",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1470-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4471",
-        "code": "BT-4471",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1471-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4472",
-        "code": "BT-4472",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1472-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4473",
-        "code": "BT-4473",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1473-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4474",
-        "code": "BT-4474",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1474-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4475",
-        "code": "BT-4475",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1475-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4476",
-        "code": "BT-4476",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1476-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4477",
-        "code": "BT-4477",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1477-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4478",
-        "code": "BT-4478",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1478-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4479",
-        "code": "BT-4479",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1479-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4480",
-        "code": "BT-4480",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1480-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4481",
-        "code": "BT-4481",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1481-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4482",
-        "code": "BT-4482",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1482-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4483",
-        "code": "BT-4483",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1483-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4484",
-        "code": "BT-4484",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1484-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4485",
-        "code": "BT-4485",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1485-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4486",
-        "code": "BT-4486",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1486-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4487",
-        "code": "BT-4487",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1487-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4488",
-        "code": "BT-4488",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1488-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4489",
-        "code": "BT-4489",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1489-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4490",
-        "code": "BT-4490",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1490-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4491",
-        "code": "BT-4491",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1491-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4492",
-        "code": "BT-4492",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1492-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4493",
-        "code": "BT-4493",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1493-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4494",
-        "code": "BT-4494",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1494-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4495",
-        "code": "BT-4495",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1495-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4496",
-        "code": "BT-4496",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1496-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4497",
-        "code": "BT-4497",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1497-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4498",
-        "code": "BT-4498",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1498-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4499",
-        "code": "BT-4499",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1499-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4500",
-        "code": "BT-4500",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1500-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4501",
-        "code": "BT-4501",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1501-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4502",
-        "code": "BT-4502",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1502-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4503",
-        "code": "BT-4503",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1503-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4504",
-        "code": "BT-4504",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1504-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4505",
-        "code": "BT-4505",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1505-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4506",
-        "code": "BT-4506",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1506-pic-2.jpg"
-      },
-      {
-        "name": "Eyebrow Tweezers #BT-4507",
-        "code": "BT-4507",
-        "image": "/images/instruments/beauty/beauty/eyebrow-tweezers/5660836-1507-pic-2.jpg"
+        "name": "Nail & Cuticle scissors ",
+        "code": "1040 - 105",
+        "image": "/images/instruments/beauty/new-beauty/Nail and cuticle scissors/Screenshot 2026-04-23 125501.png"
       }
     ]
   },
   {
-    "title": "Eyelash Tweezers",
-    "folder": "eyelash-tweezers",
+    "title": "Cuticle nippers",
     "items": [
       {
-        "name": "Eyelash Tweezers #BT-4508",
-        "code": "BT-4508",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1508-pic-2.jpg"
+        "name": "Cuticle nippers ",
+        "code": "2001 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130101.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4509",
-        "code": "BT-4509",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1509-pic-2.jpg"
+        "name": "Cuticle nippers",
+        "code": "2005 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130111.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4510",
-        "code": "BT-4510",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1510-pic-2.jpg"
+        "name": "Cuticle nippers",
+        "code": "2009 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130119.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4511",
-        "code": "BT-4511",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1511-pic-2.jpg"
+        "name": "Cuticle nippers",
+        "code": "2013 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130129.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4512",
-        "code": "BT-4512",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1512-pic-2.jpg"
+        "name": "Cuticle nippers",
+        "code": "2017 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130137.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4513",
-        "code": "BT-4513",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1513-pic-2.jpg"
+        "name": "Cuticle nippers",
+        "code": "2021 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130145.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4514",
-        "code": "BT-4514",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1514-pic-2.jpg"
+        "name": "Cuticle nippers",
+        "code": "2023 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130153.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4515",
-        "code": "BT-4515",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1515-pic-2.jpg"
+        "name": "Cuticle nippers ",
+        "code": "2030 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130216.png"
       },
       {
-        "name": "Eyelash Tweezers #BT-4516",
-        "code": "BT-4516",
-        "image": "/images/instruments/beauty/beauty/eyelash-tweezers/269146171-1516-pic-2.jpg"
+        "name": "Cuticle nippers ",
+        "code": "2035 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130225.png"
+      },
+      {
+        "name": "Cuticle nippers ",
+        "code": "2038 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130233.png"
+      },
+      {
+        "name": "Cuticle nippers",
+        "code": "2042 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130241.png"
+      },
+      {
+        "name": "Cuticle nippers",
+        "code": "2043 - 115",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130253.png"
+      },
+      {
+        "name": "Cuticle nippers ",
+        "code": "2060 - 110",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130304.png"
+      },
+      {
+        "name": "Cuticle nippers",
+        "code": "2061 - 115",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130315.png"
+      },
+      {
+        "name": "Cuticle nippers",
+        "code": "2080 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130344.png"
+      },
+      {
+        "name": "Cuticle nippers",
+        "code": "2090 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Cuticle Nippers/Screenshot 2026-04-23 130353.png"
       }
     ]
+  },
+  {
+    "title": "Nail nippers",
+    "items": [
+      {
+        "name": "Nail nippers",
+        "code": "3001 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130631.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3002 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130640.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3003 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130654.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3010 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130708.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3011 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130720.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3020 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130729.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3025 - 130",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130736.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3028 - 130",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130742.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3030 - 130",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130750.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3035 - 130",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130757.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3036 - 130",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130805.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3040 - 135",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130811.png"
+      },
+      {
+        "name": "Nail nippers",
+        "code": "3042 - 135",
+        "image": "/images/instruments/beauty/new-beauty/Nail Nippers/Screenshot 2026-04-23 130820.png"
+      }
+    ]
+  },
+  {
+    "title": "Nail clippers",
+    "items": [
+      {
+        "name": "Nail clippers 8cm",
+        "code": "1550 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Nail clippers/Screenshot 2026-04-23 125846.png"
+      },
+      {
+        "name": "Nail clippers 8cm ",
+        "code": "1552 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Nail clippers/Screenshot 2026-04-23 125856.png"
+      },
+      {
+        "name": "Nail clippers 8cm",
+        "code": "1554 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Nail clippers/Screenshot 2026-04-23 125914.png"
+      },
+      {
+        "name": "Nail clippers 8cm",
+        "code": "1556 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Nail clippers/Screenshot 2026-04-23 125923.png"
+      },
+      {
+        "name": "Nail clippers 8cm",
+        "code": "1558 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Nail clippers/Screenshot 2026-04-23 125932.png"
+      }
+    ]
+  },
+  {
+    "title": "Pedicure nail cutters",
+    "items": [
+      {
+        "name": "Pedicure nail cutter box joint double spring size 14cm",
+        "code": "3101 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 130942.png"
+      },
+      {
+        "name": "Pedicure nail cutter box joint fine jaws double spring size 14cm",
+        "code": "3105 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 130948.png"
+      },
+      {
+        "name": "Head cutter box joint double spring with lock size 14cm",
+        "code": "3325 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 130954.png"
+      },
+      {
+        "name": "Pedicure nail cutter box joint double spring size 11.5cm",
+        "code": "3110 - 115",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131001.png"
+      },
+      {
+        "name": "Head cutter box joint double spring with lock size 14cm",
+        "code": "3120 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131006.png"
+      },
+      {
+        "name": "Head cutter box joint convex jaws double spring with lock size 14cm",
+        "code": "3122 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131012.png"
+      },
+      {
+        "name": "Head cutter box joint half jaws double spring with lock size 14cm",
+        "code": "3125 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131018.png"
+      },
+      {
+        "name": "Nail cutter lap joint single spring with lock size 12cm/14cm",
+        "code": "3135 - 120 / 3136 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131024.png"
+      },
+      {
+        "name": "Puffer spring nail cutter lap joint fluted handle with lock size 14cm",
+        "code": "3140 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131031.png"
+      },
+      {
+        "name": "Puffer spring nail cutter screw joint fluted handle with lock size 12cm",
+        "code": "3141 - 120",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131038.png"
+      },
+      {
+        "name": "Multi-action Pedicure nail cutter with lock size 16cm",
+        "code": "3160 - 160 / 3161 - 160",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131044.png"
+      },
+      {
+        "name": "Multi-action Pedicure nail cutter double spring fluted handle size 15cm",
+        "code": "3165 - 160",
+        "image": "/images/instruments/beauty/new-beauty/Pedicure Nail cutters/Screenshot 2026-04-23 131053.png"
+      }
+    ]
+  },
+  {
+    "title": "German forging",
+    "items": [
+      {
+        "name": "Cuticle nipper lap joint beak size 7mm size 10cm",
+        "code": "3301 - 100",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131232.png"
+      },
+      {
+        "name": "Cuticle nipper box joint beak size 5mm size 10cm",
+        "code": "3305 - 100",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131238.png"
+      },
+      {
+        "name": "Nail cutter wire spring lap joint size 10cm",
+        "code": "3310 - 100",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131244.png"
+      },
+      {
+        "name": "Nail cutter wire spring lap joint size 12cm",
+        "code": "3311 - 120",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131308.png"
+      },
+      {
+        "name": "Corner cutter box joint fine jaws single spring size 12cm",
+        "code": "3320 - 120",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131317.png"
+      },
+      {
+        "name": "Corner cutter box joint fine jaws single spring size 13cm",
+        "code": "3321 - 130",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131323.png"
+      },
+      {
+        "name": "Head cutter box joint double spring with lock size 14cm",
+        "code": "3325 - 140",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131329.png"
+      },
+      {
+        "name": "Puffer spring nail cutter lap joint fluted handle with lock size 12cm",
+        "code": "3329 - 120",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131336.png"
+      },
+      {
+        "name": "Puffer spring nail cutter lap joint fluted handle with lock size 14cm",
+        "code": "3330 - 140",
+        "image": "/images/instruments/beauty/new-beauty/German Forging(limited series)/Screenshot 2026-04-23 131343.png"
+      }
+    ]
+  },
+  {
+    "title": "Tweezers",
+    "items": [
+      {
+        "name": "Tweezers Slanted Point Size 9.5cm",
+        "code": "4020 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131552.png"
+      },
+      {
+        "name": "Tweezers Straight Point Size 9.5cm",
+        "code": "4050 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131557.png"
+      },
+      {
+        "name": "Tweezers Straight Point Size 9.5cm",
+        "code": "4055 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131601.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Acrylic Coated",
+        "code": "4060 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131607.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Size 9.5cm",
+        "code": "4080 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131612.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Size 9.5cm",
+        "code": "4095 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131617.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Size 9.5cm",
+        "code": "4001 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131622.png"
+      },
+      {
+        "name": "Tweezers Straight Point Size 9.5cm",
+        "code": "4002 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131626.png"
+      },
+      {
+        "name": "Tweezers Bent Point Size 9.5cm",
+        "code": "4003 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131631.png"
+      },
+      {
+        "name": "Tweezers Fine Point Size 9.5cm",
+        "code": "4004 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131634.png"
+      },
+      {
+        "name": "Tweezers Fine / Slanted Point Size 9.5cm",
+        "code": "4005 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131639.png"
+      },
+      {
+        "name": "Tweezers Slanting Point with three holes in handle",
+        "code": "4006 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131643.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Grooved Handle",
+        "code": "4200 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131650.png"
+      },
+      {
+        "name": "Tweezers Half Slanted Point Serrated Handle",
+        "code": "4205 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131655.png"
+      },
+      {
+        "name": "Tweezers Slanted Gold Point Serrated / Thumb Rest Handle",
+        "code": "4209 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131659.png"
+      },
+      {
+        "name": "Tweezers Fine Gold Point Serrated Handle",
+        "code": "4214 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131703.png"
+      },
+      {
+        "name": "Tweezers Straight Point Grooved Handle",
+        "code": "4219 - 080",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131707.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Fluted Handle",
+        "code": "4225 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131711.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Size 9.5cm",
+        "code": "4250 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131716.png"
+      },
+      {
+        "name": "Tweezers Slanted Point Size 9.5cm",
+        "code": "4251 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131720.png"
+      },
+      {
+        "name": "Tweezers Double End, Slanted / Fine Point",
+        "code": "4260 - 105",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131729.png"
+      },
+      {
+        "name": "Tweezers with Magnifying Glass Fine Point",
+        "code": "4270 - 095",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131734.png"
+      },
+      {
+        "name": "Tweezers Serrated Handle Size 14cm",
+        "code": "4280 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131739.png"
+      },
+      {
+        "name": "Tweezers Serrated Handle Size 15.5cm",
+        "code": "4285 - 155",
+        "image": "/images/instruments/beauty/new-beauty/Tweezers/Screenshot 2026-04-23 131745.png"
+      }
+    ]
+  },
+  {
+    "title": "Instruments for professional application",
+    "items": [
+      {
+        "name": "Saphire nail file plastic handle",
+        "code": "5201 - 090",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132217.png"
+      },
+      {
+        "name": "Nail file stainless steel",
+        "code": "5210 - 080",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132222.png"
+      },
+      {
+        "name": "Foot rasp file four side raspe",
+        "code": "5220 - 140",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132226.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle stainless steel head",
+        "code": "5225 - 180",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132231.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle stainless steel head",
+        "code": "5226 - 180",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132236.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle stainless steel head",
+        "code": "5227 - 185",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132240.png"
+      },
+      {
+        "name": "Foot rasp file stainless steel handle stainless steel head",
+        "code": "5232 - 180",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132245.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle stainless steel head two side",
+        "code": "5235 - 180",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132249.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle sand paper double side",
+        "code": "5250 - 240",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132255.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle sand paper curved head double side",
+        "code": "5255 - 270",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132259.png"
+      },
+      {
+        "name": "Foot rasp file plastic handle sand paper double side",
+        "code": "5260 - 270",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132303.png"
+      },
+      {
+        "name": "Corn cutter plastic handle",
+        "code": "5301 - 145",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132306.png"
+      },
+      {
+        "name": "Corn cutter complete plastic disposable use",
+        "code": "5305 - 145",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132310.png"
+      },
+      {
+        "name": "Corn cutter stainless steel handle",
+        "code": "5309 - 145",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132316.png"
+      },
+      {
+        "name": "Pedicure blades 10 per pack",
+        "code": "5320 - 000",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132320.png"
+      },
+      {
+        "name": "Acrylic nail profiler stainless steel",
+        "code": "5340 - 140",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132330.png"
+      },
+      {
+        "name": "Hair shaper",
+        "code": "5356 - 130",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132358.png"
+      },
+      {
+        "name": "Razor",
+        "code": "5356 - 150",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132406.png"
+      },
+      {
+        "name": "Razor",
+        "code": "5355 - 160",
+        "image": "/images/instruments/beauty/new-beauty/InstrumentS for professional applications/Screenshot 2026-04-23 132413.png"
+      }
+    ]
+  },
+  {
+    "title": "Choice of finishes in Barber & Thinning Scissors",
+    "items": []
+  },
+  {
+    "title": "Professional Barber & Thinning scissors",
+    "items": []
+  },
+  {
+    "title": "Barber & Thinning scissors kits",
+    "items": []
+  },
+  {
+    "title": "Professional Barber scissors",
+    "items": [
+      {
+        "name": "Professional Barber scissors",
+        "code": "1050 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125603.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1060 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125612.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1070 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125622.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1080 - 140",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125637.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1090 - 115",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125648.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1095 - 115",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125656.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1105 - 100",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125705.png"
+      },
+      {
+        "name": "Professional Barber scissors",
+        "code": "1115 - 090",
+        "image": "/images/instruments/beauty/new-beauty/Scissors/Screenshot 2026-04-23 125713.png"
+      }
+    ]
+  },
+  {
+    "title": "Professional Thinning scissors",
+    "items": []
+  },
+  {
+    "title": "Thinning scissors (CNC)",
+    "items": []
+  },
+  {
+    "title": "Pet Grooming scissors",
+    "items": []
   },
   {
     "title": "Manicure Kits",
-    "folder": "manicure-kits",
-    "items": [
-      {
-        "name": "Manicure Kits #BK-7517",
-        "code": "BK-7517",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1517-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7518",
-        "code": "BK-7518",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1518-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7519",
-        "code": "BK-7519",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1519-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7520",
-        "code": "BK-7520",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1520-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7521",
-        "code": "BK-7521",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1521-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7522",
-        "code": "BK-7522",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1522-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7523",
-        "code": "BK-7523",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1523-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7524",
-        "code": "BK-7524",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1524-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7525",
-        "code": "BK-7525",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1525-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Kits #BK-7526",
-        "code": "BK-7526",
-        "image": "/images/instruments/beauty/beauty/manicure-kits/419798577-1526-pic-2.jpg"
-      }
-    ]
+    "items": []
   },
   {
-    "title": "Manicure Scissors",
-    "folder": "manicure-scissors",
-    "items": [
-      {
-        "name": "Manicure Scissors #BS-1427",
-        "code": "BS-1427",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1427-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1428",
-        "code": "BS-1428",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1428-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1429",
-        "code": "BS-1429",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1429-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1430",
-        "code": "BS-1430",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1430-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1431",
-        "code": "BS-1431",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1431-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1432",
-        "code": "BS-1432",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1432-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1433",
-        "code": "BS-1433",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1433-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1434",
-        "code": "BS-1434",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1434-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1435",
-        "code": "BS-1435",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1435-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1436",
-        "code": "BS-1436",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1436-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1437",
-        "code": "BS-1437",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1437-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1438",
-        "code": "BS-1438",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1438-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1439",
-        "code": "BS-1439",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1439-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1440",
-        "code": "BS-1440",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1440-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1441",
-        "code": "BS-1441",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1441-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1442",
-        "code": "BS-1442",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1442-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1443",
-        "code": "BS-1443",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1443-pic-2.jpg"
-      },
-      {
-        "name": "Manicure Scissors #BS-1444",
-        "code": "BS-1444",
-        "image": "/images/instruments/beauty/beauty/manicure-scissors/343452389-1444-pic-2.jpg"
-      }
-    ]
-  },
-  {
-    "title": "Nail Nippers",
-    "folder": "Nail nippers",
-    "items": [
-      {
-        "name": "Nail Nippers #BN-3390",
-        "code": "BN-3390",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1390-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3391",
-        "code": "BN-3391",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1391-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3392",
-        "code": "BN-3392",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1392-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3393",
-        "code": "BN-3393",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1393-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3394",
-        "code": "BN-3394",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1394-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3395",
-        "code": "BN-3395",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1395-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3396",
-        "code": "BN-3396",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1396-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3397",
-        "code": "BN-3397",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1397-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3398",
-        "code": "BN-3398",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1398-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3399",
-        "code": "BN-3399",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1399-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3400",
-        "code": "BN-3400",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1400-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3401",
-        "code": "BN-3401",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1401-pic-2.jpg"
-      },
-      {
-        "name": "Nail Nippers #BN-3402",
-        "code": "BN-3402",
-        "image": "/images/instruments/beauty/beauty/Nail nippers/667769684-1402-pic-2.jpg"
-      }
-    ]
-  },
-  {
-    "title": "Pedicure Implements",
-    "folder": "Pedicure Implements",
-    "items": [
-      {
-        "name": "Pedicure Implements #BP-31403",
-        "code": "BP-31403",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1403-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31404",
-        "code": "BP-31404",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1404-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31405",
-        "code": "BP-31405",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1405-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31406",
-        "code": "BP-31406",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1406-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31407",
-        "code": "BP-31407",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1407-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31408",
-        "code": "BP-31408",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1408-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31409",
-        "code": "BP-31409",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1409-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31410",
-        "code": "BP-31410",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1410-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31411",
-        "code": "BP-31411",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1411-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31412",
-        "code": "BP-31412",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1412-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31413",
-        "code": "BP-31413",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1413-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31414",
-        "code": "BP-31414",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1414-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31415",
-        "code": "BP-31415",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1415-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31416",
-        "code": "BP-31416",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1416-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31417",
-        "code": "BP-31417",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1417-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31418",
-        "code": "BP-31418",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1418-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31419",
-        "code": "BP-31419",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1419-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31420",
-        "code": "BP-31420",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1420-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31421",
-        "code": "BP-31421",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1421-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31422",
-        "code": "BP-31422",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1422-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31423",
-        "code": "BP-31423",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1423-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31424",
-        "code": "BP-31424",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1424-pic-2.jpg"
-      },
-      {
-        "name": "Pedicure Implements #BP-31425",
-        "code": "BP-31425",
-        "image": "/images/instruments/beauty/beauty/Pedicure Implements/518969263-1425-pic-2.jpg"
-      }
-    ]
+    "title": "Manicure Display",
+    "items": []
   }
 ];

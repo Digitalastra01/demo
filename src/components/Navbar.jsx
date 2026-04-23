@@ -199,14 +199,29 @@ const Navbar = () => {
 
           {/* Bottom Nav Links */}
           <div className="bottom-nav-bar desktop-menu">
-            <a href="/#about" className="nav-link">About Us</a>
+            <Link to="/about-us" className="nav-link">About Us</Link>
             <div className={`dropdown-container dropdown-hover ${location.pathname.includes('/beauty-instruments') ? 'active-nav-item' : ''}`}>
-              <span className="nav-link">Beauty Instruments <ChevronDown size={14} /></span>
+              <Link to="/products/beauty-instruments" className="nav-link">Beauty Instruments <ChevronDown size={14} /></Link>
               <div className="dropdown-menu">
                 {beautyCategories.map((cat, idx) => (
                   <Link 
                     key={idx} 
-                    to={`/products/beauty-instruments#${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                    to={`/products/beauty-instruments/${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                    className="dropdown-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {cat}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            <div className={`dropdown-container dropdown-hover ${location.pathname.includes('/surgical-instruments') ? 'active-nav-item' : ''}`}>
+              <Link to="/products/surgical-instruments" className="nav-link">Surgical Instruments <ChevronDown size={14} /></Link>
+              <div className="dropdown-menu">
+                {surgicalCategories.map((cat, idx) => (
+                  <Link 
+                    key={idx} 
+                    to={`/products/surgical-instruments/${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
                     className="dropdown-item"
                     onClick={() => setIsOpen(false)}
                   >
@@ -219,19 +234,18 @@ const Navbar = () => {
               <Link to="/products/dental-instruments" className="nav-link">Dental Instruments <ChevronDown size={14} /></Link>
               <div className="dropdown-menu">
                 {dentalCategories.map((cat, idx) => (
-                  <Link key={idx} to="/products/dental-instruments" className="dropdown-item">{cat}</Link>
+                  <Link 
+                    key={idx} 
+                    to={`/products/dental-instruments/${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                    className="dropdown-item"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {cat}
+                  </Link>
                 ))}
               </div>
             </div>
-            <div className={`dropdown-container dropdown-hover ${location.pathname.includes('/surgical-instruments') ? 'active-nav-item' : ''}`}>
-              <Link to="/products/surgical-instruments" className="nav-link">Surgical Instruments <ChevronDown size={14} /></Link>
-              <div className="dropdown-menu">
-                {surgicalCategories.map((cat, idx) => (
-                  <Link key={idx} to="/products/surgical-instruments" className="dropdown-item">{cat}</Link>
-                ))}
-              </div>
-            </div>
-            <a href="#contact" className="nav-link">Contact Us</a>
+            <a href="/#contact" className="nav-link">Contact Us</a>
           </div>
         </div>
 
@@ -259,7 +273,7 @@ const Navbar = () => {
                </div>
 
                <div className="mobile-nav-links">
-                  <a href="/#about" className="mobile-link" onClick={() => setIsOpen(false)}>About Us</a>
+                  <Link to="/about-us" className="mobile-link" onClick={() => setIsOpen(false)}>About Us</Link>
                   
                   {/* Beauty Instruments Accordion */}
                   <div className="mobile-accordion">
@@ -280,7 +294,7 @@ const Navbar = () => {
                           {beautyCategories.map((cat, idx) => (
                             <Link 
                               key={idx} 
-                              to={`/products/beauty-instruments#${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
+                              to={`/products/beauty-instruments/${cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')}`} 
                               className="mobile-submenu-link"
                               onClick={() => setIsOpen(false)}
                             >
@@ -292,9 +306,9 @@ const Navbar = () => {
                     </AnimatePresence>
                   </div>
 
-                  <Link to="/products/dental-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
                   <Link to="/products/surgical-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Surgical Instruments</Link>
-                  <a href="#contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact Us</a>
+                  <Link to="/products/dental-instruments" className="mobile-link" onClick={() => setIsOpen(false)}>Dental Instruments</Link>
+                  <a href="/#contact" className="mobile-link" onClick={() => setIsOpen(false)}>Contact Us</a>
                </div>
 
                <div className="mobile-menu-footer">
