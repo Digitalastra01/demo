@@ -2,71 +2,11 @@ import { useEffect, useState } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import ProductImageModal from '../components/ProductImageModal';
 import { useCart } from '../context/CartContext';
+import { dentalProductsData } from '../data/dentalProducts';
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import './ProductGallery.css'; 
 import '../components/BeautyShowcase.css'; 
-
-// Only including categories that have existing images on the server
-const categories = [
-  "Extracting Forceps",
-  "Extracting Forceps English Pattern",
-  "Elevators",
-  "Endodontic Condensers, Obturation Instruments, Excavators, Probes",
-  "Amalgam Pluggers Condensers, Burnishers",
-  "Wax Carvers, Carvers, Chisels",
-  "Composite Placement, Plastic Filling Instruments",
-  "Curettes, Gracey Curettes, Dental Products",
-  "Wax Porcelain and Cement Instruments Wax & Modeling Instruments",
-  "Spatulas, Cement Spatulas",
-  "Files, Hoes, Knives, Wax & Plaster Knives",
-  "Bone Curettes, Bone Files, Bone Chisels, Bone Mallets",
-  "Crown Removers, Crown Instruments",
-  "Implants & Measuring",
-  "Amalgam Guns & Carriers, Retainers, Bands, Strip Holders, Napkin",
-  "Rubber Dam Instruments, Rubber Dam Clamps",
-  "Syringes, Tweezers, Sterilizing & Lab",
-  "Retractors, Lip & Cheek Retractor, Hook, Depressor & Mouth Gags"
-];
-
-const DentalProductCard = ({ name, idBase, idx, onProductClick }) => {
-  const { addToCart } = useCart();
-  const code = `D-${idBase}-${100 + idx}`;
-  const elementId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-  const imagePath = `/images/instruments/dental/${elementId}.png`;
-  
-  return (
-    <div 
-      id={elementId} 
-      className="gallery-card" 
-    >
-      <div className="product-image-wrapper" onClick={() => onProductClick({ name, code, elementId, image: imagePath })}>
-        <img 
-          src={imagePath} 
-          alt={name} 
-          className="product-card-img"
-        />
-        <div className="product-card-overlay">
-            <span className="view-label">View Category</span>
-        </div>
-      </div>
-      
-      <div className="product-info">
-        <h3 className="product-name">{name}</h3>
-        <p className="product-code">{code}</p>
-        <button 
-          className="btn-add-cart-simple" 
-          onClick={(e) => {
-            e.stopPropagation();
-            addToCart({ name, code, elementId, image: imagePath });
-          }}
-        >
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  );
-};
 
 const DentalInstruments = () => {
   const location = useLocation();
@@ -85,16 +25,9 @@ const DentalInstruments = () => {
   useEffect(() => {
     // Function to get 4 random dental products
     const getRandomDental = () => {
-      const shuffled = [...categories].sort(() => 0.5 - Math.random());
-      return shuffled.slice(0, 4).map((cat, idx) => {
-        const elementId = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        return {
-          name: cat,
-          code: `D-10-${100 + idx}`,
-          image: `/images/instruments/dental/${elementId}.png`,
-          elementId
-        };
-      });
+      const allProducts = dentalProductsData.flatMap(cat => cat.items);
+      const shuffled = [...allProducts].sort(() => 0.5 - Math.random());
+      return shuffled.slice(0, 4);
     };
 
     setFeaturedProducts(getRandomDental());
@@ -109,7 +42,7 @@ const DentalInstruments = () => {
 
   useEffect(() => {
     if (location.hash) {
-      const id = location.hash.replace('#', '');
+      const id = decodeURIComponent(location.hash.replace('#', ''));
       const element = document.getElementById(id);
       if (element) {
         setTimeout(() => {
@@ -135,15 +68,15 @@ const DentalInstruments = () => {
         <div className="quick-nav-section">
           <h2 className="quick-nav-title">Select a Category</h2>
           <div className="quick-nav-grid">
-            {categories.map((cat, idx) => {
-              const hash = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+            {dentalProductsData.map((category, idx) => {
+              const hash = category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
               return (
                 <Link 
                   key={idx} 
                   to={`/products/dental-instruments/${hash}`}
                   className="quick-nav-card"
                 >
-                  <span className="quick-nav-name">{cat}</span>
+                  <span className="quick-nav-name">{category.title}</span>
                   <div className="quick-nav-indicator"></div>
                 </Link>
               );
@@ -172,25 +105,28 @@ const DentalInstruments = () => {
           </div>
 
           <div className="showcase-grid">
-            {featuredProducts.map((product, index) => (
-              <motion.div 
-                key={`${product.code}-${index}`}
-                className="showcase-item"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -10 }}
-                onClick={() => handleProductClick({ ...product, category: 'dental' })}
-                style={{ cursor: 'pointer' }}
-              >
-                <div className="showcase-img-container">
-                  <img src={product.image} alt={product.name} className="showcase-img" />
-                  <div className="showcase-overlay">
-                    <span className="showcase-label">{product.name}</span>
+            {featuredProducts.map((product, index) => {
+              const elementId = product.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+              return (
+                <motion.div 
+                  key={`${product.code}-${index}`}
+                  className="showcase-item"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  whileHover={{ y: -10 }}
+                  onClick={() => handleProductClick({ ...product, category: 'dental', elementId })}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <div className="showcase-img-container">
+                    <img src={product.image} alt={product.name} className="showcase-img" />
+                    <div className="showcase-overlay">
+                      <span className="showcase-label">{product.name}</span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </section>
       </div>
@@ -209,3 +145,4 @@ const DentalInstruments = () => {
 };
 
 export default DentalInstruments;
+

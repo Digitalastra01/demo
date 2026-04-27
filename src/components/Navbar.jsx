@@ -2,7 +2,14 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail, Search, ChevronDown, ChevronRight, Activity, ShoppingCart } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { dentalCategories, surgicalCategories, beautyCategories } from '../data/categories';
+import { dentalProductsData } from '../data/dentalProducts';
+import { surgicalProductsData } from '../data/surgicalProducts';
+import { beautyProductsData } from '../data/beautyProducts';
+
+const dentalCategories = dentalProductsData.map(c => c.title);
+const surgicalCategories = surgicalProductsData.map(c => c.title);
+const beautyCategories = beautyProductsData.map(c => c.title);
+
 import { useCart } from '../context/CartContext';
 import './Navbar.css';
 
@@ -19,7 +26,7 @@ const Navbar = () => {
     if (searchQuery.trim().length > 0) {
       if (searchResults.length > 0) {
         const hash = searchResults[0].name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-        navigate(`/products/${searchResults[0].type}-instruments#${hash}`);
+        navigate(`/products/${searchResults[0].type}-instruments/${hash}`);
         setIsSearchOpen(false);
         setSearchQuery("");
       } else {
@@ -156,7 +163,7 @@ const Navbar = () => {
                       return (
                         <Link 
                           key={i} 
-                          to={`/products/${res.type}-instruments#${hash}`} 
+                          to={`/products/${res.type}-instruments/${hash}`} 
                           className="search-result-item"
                           onClick={() => {
                             setIsSearchOpen(false);

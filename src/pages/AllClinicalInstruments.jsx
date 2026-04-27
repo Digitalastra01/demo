@@ -2,16 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ProductImageModal from '../components/ProductImageModal';
 import { useCart } from '../context/CartContext';
-import { surgicalCategories, dentalCategories } from '../data/categories';
+import { dentalProductsData } from '../data/dentalProducts';
+import { surgicalProductsData } from '../data/surgicalProducts';
 import './ProductGallery.css';
 
 const ClinicalProductCard = ({ product, onProductClick }) => {
   const { addToCart } = useCart();
-  const { name, code, image, elementId } = product;
+  const { name, code, image } = product;
+  const elementId = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
   
   return (
     <div id={elementId} className="gallery-card">
-      <div className="product-image-wrapper" onClick={() => onProductClick({ ...product })}>
+      <div className="product-image-wrapper" onClick={() => onProductClick({ ...product, elementId })}>
         <img src={image} alt={name} className="product-card-img" />
         <div className="product-card-overlay">
             <span className="view-label">View Details</span>
@@ -25,7 +27,7 @@ const ClinicalProductCard = ({ product, onProductClick }) => {
           className="btn-add-cart-simple" 
           onClick={(e) => {
             e.stopPropagation();
-            addToCart({ ...product });
+            addToCart({ ...product, elementId });
           }}
         >
           Add to Cart
@@ -37,7 +39,7 @@ const ClinicalProductCard = ({ product, onProductClick }) => {
 
 const AllClinicalInstruments = ({ type }) => {
   const [selectedProduct, setSelectedProduct] = useState(null);
-  const categories = type === 'dental' ? dentalCategories : surgicalCategories;
+  const productsData = type === 'dental' ? dentalProductsData : surgicalProductsData;
   const title = type === 'dental' ? 'Full Dental Collection' : 'Full Surgical Collection';
 
   useEffect(() => {
@@ -56,25 +58,17 @@ const AllClinicalInstruments = ({ type }) => {
           <div className="category-title-underline"></div>
         </div>
 
-        {categories.map((cat, catIdx) => {
-          const hash = cat.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
-          // Placeholder items for each category
-          const items = Array.from({ length: 4 }).map((_, idx) => ({
-            name: `${cat} Item ${idx + 1}`,
-            code: `${type === 'dental' ? 'D' : 'S'}-10-${100 + idx}`,
-            image: `/images/instruments/${type}/${hash}.png`,
-            elementId: `${hash}-${idx}`,
-            category: type
-          }));
+        {productsData.map((category, catIdx) => {
+          const hash = category.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 
           return (
             <div key={catIdx} className="category-section" id={hash}>
-              <h2 className="category-heading">{cat}</h2>
+              <h2 className="category-heading">{category.title}</h2>
               <div className="gallery-grid">
-                {items.map((item, idx) => (
+                {category.items.map((item, idx) => (
                   <ClinicalProductCard 
                     key={idx} 
-                    product={item} 
+                    product={{ ...item, category: type }} 
                     onProductClick={(prod) => setSelectedProduct(prod)}
                   />
                 ))}
@@ -98,3 +92,4 @@ const AllClinicalInstruments = ({ type }) => {
 };
 
 export default AllClinicalInstruments;
+
